@@ -1,0 +1,1112 @@
+@import '../assets/css/mixin.scss';
+
+.pageUserHome{
+    padding: 180px 8% 40px 15%;
+    background: #14223A;
+    overflow: hidden;
+    @include mediaLaptop{
+        padding: 180px 5% 40px 10%;
+    }
+    @include mediaTablet{
+        padding: 170px 0% 40px 0%;
+    }
+    @include mediaPhone{
+        padding: 150px 0% 30px 0%;
+    }
+    @include mediaMediumPhone{
+        padding: 100px 0px 20px 0px;
+    }
+}
+
+.userHome{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.userHomeBox{
+    z-index: 2;
+}
+
+.userHomeBackground{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.circleBackCursos{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: .75;
+}
+
+.circlePinkCursos{
+    background: -moz-radial-gradient(center, ellipse cover, rgba(245,15,87,1) 0%, rgba(26,45,77,0) 67%, rgba(26,45,77,0) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(245,15,87,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    background: radial-gradient(ellipse at center, rgba(245,15,87,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    top: -500px;
+    right: -500px;
+}
+
+.circleBlueCursos{
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,122,255,1) 0%, rgba(26,45,77,0) 67%, rgba(26,45,77,0) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,122,255,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    background: radial-gradient(ellipse at center, rgba(0,122,255,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    bottom: -300px;
+    width: 1200px;
+    left: -600px;
+    opacity: .5;
+    bottom: -20%;
+}
+
+
+
+
+// Intro
+.uhIntro{
+    display: flex;
+    //overflow: hidden;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    padding: 0px 0px 120px 0px;
+    @include mediaTablet{
+        padding: 0px 30px 80px 30px;
+    }
+    @include mediaPhone{
+        height: auto;
+        padding: 0px 30px 0px 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .title{
+        width: 480px;
+        @include mediaLaptop{
+            padding-right: 2%;
+            width: 400px;
+        }
+        @include mediaTablet{
+            padding-right: 1%;
+            width: 350px;
+        }
+        @include mediaPhone{
+            padding-right: 0%;
+            width: 100%;
+        }
+        h2{
+            color: white;
+            font-size: 48px;
+            font-weight: 500;
+            margin: 0px 0px 50px 0px;
+            padding: 0px 0px 50px 0px;
+            position: relative;
+            strong{
+                color: var(--blue);
+            }
+            .pink{
+                color: var(--pink);
+            }
+            .subLine{
+                width: 600px;
+                position: absolute;
+                left: -300px;
+                bottom: 0px;
+                background: white;
+                height: 24px;
+            }
+            /*
+            &::before{
+                content: '';
+                width: 1000px;
+                position: absolute;
+                left: -750px;
+                bottom: 0px;
+                background: var(--white);
+                height: 24px;
+            }
+            */
+            @include mediaLaptop{
+                font-size: 42px;
+            }
+            @include mediaLaptopMini{
+                font-size: 35px;
+            }
+            @include mediaTablet{
+                font-size: 30px;
+                margin: 0px 0px 30px 0px;
+                padding: 0px 0px 30px 0px;
+                .subLine{
+                    left: -850px;
+                    height: 16px;
+                }
+            }
+        }
+        p{
+            font-size: 16px;
+            color: white;
+            letter-spacing: 0.7px;
+            strong{
+                color: var(--blue);
+                font-family: var(--sfBold);
+                &:first-child{
+                    color: var(--sky-blue);
+                }
+            }
+            @include mediaPhone{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.9);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.5);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.9);
+		transform: translatey(0px);
+	}
+}
+
+
+.introImg{
+    width: calc( 90% - 480px );
+    padding: 0px 0px 0px 5%;
+    @include mediaLaptop{
+        width: calc( 100% - 400px );
+    }
+    @include mediaTablet{
+        width: calc( 100% - 350px );
+        padding: 0px 0px 0px 2%;
+    }
+    @include mediaPhone{
+        width: 85%;
+        margin: 30px 0px 0px 0px;
+        padding: 0px 0px 0px 0%
+    }
+    img{
+        width: 100%;
+        height: auto;
+        display: inline-block;
+    }
+    .det{
+        position: absolute;
+        width: 86px;
+        height: 86px;
+        background: rgba(247,5,45,.4);
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,.15);
+        backdrop-filter: blur(5px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.9);
+        @include mediaPhone{
+            border-radius: 8px;
+        }
+    }
+    .det1{
+        right: 30%;
+        top: -23px;
+        animation: float 6s ease-in-out infinite;
+        animation-delay: 1s;
+        z-index: 2;
+        img{
+            width: 45px;
+            max-width: 80%;
+        }
+        @include mediaPhone{
+            width: 35px;
+            height: 35px;
+            top:-5px;
+        }
+    }
+    .det2{
+        right: -20px;
+        bottom: 15%;
+        background: rgba(247,5,45,.4);
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,.15);
+        backdrop-filter: blur(15px);
+        width: 120px;
+        z-index: 2;
+        height: 120px;
+        @include mediaPhone{
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .det3{
+        left: 25%;
+        width: 120px;
+        height: 120px;
+        bottom: -50px;
+        z-index: 3;
+        background: rgba(247,5,45,.4);
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,.15);
+        backdrop-filter: blur(15px);
+        animation: float 6s ease-in-out infinite;
+        animation-delay: 2s;
+        img{
+            width: 87px;
+            max-width: 80%;
+        }
+        @include mediaPhone{
+            width: 50px;
+            height: 50px;
+            bottom: -5px;
+            img{
+                width: 31px;
+            }
+        }
+    }
+}
+
+
+// Foryou
+.uhForyou{
+    padding: 80px 0px 0px 0px;
+    position: relative;
+    &::before{
+        content: '';
+        width: 200%;
+        height: 100%;
+        background: rgba(18,18,18,.4);
+        backdrop-filter: blur(20px);
+        position: absolute;
+        top: 0px;
+        left: -50%;
+        z-index: 1;
+    }
+    @include mediaTablet{
+        padding: 50px 0px 50px 0px;
+    }
+    @include mediaTablet{
+        padding: 40px 0px 0px 0px;
+        margin-top: 60px;
+    }
+}
+
+.uhForyou2{
+    padding: 80px 0px 80px 0px;
+    @include mediaLaptop{
+        padding: 70px 0px 70px 0px;
+    }
+    @include mediaTablet{
+        padding: 50px 0px 50px 0px;
+    }
+}
+
+
+.uhForyouBox{
+    z-index: 2;
+    @include mediaPhone{
+        padding: 0px 5% 0px 5%;
+    }
+    .title{
+        margin: 0px 0px 0px 0px;
+        h4{
+            font-size: 24px;
+            color: white;
+            font-family: var(--sfRegular);
+            font-weight: 500px;
+            strong{
+                font-weight: 500px;
+                color: var(--pink);
+            }
+            .skyblue{
+                color: var(--sky-blue);
+            }
+        }
+        @include mediaTablet{
+            margin: 0px 0px 40px 0px;
+            h4{
+                font-size: 20px;
+            }
+        }
+        @include mediaPhone{
+            margin: 0px 0px 20px 0px;
+        }
+    }
+}
+
+.uhForyouBox2{
+    padding: 50px 0px 70px 0px;
+    .title{
+        margin-bottom: 30px;
+    }
+
+    .cursoItem{
+        background: rgba(0, 122, 255, 0.1);
+        figure{
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            display: block;
+            position: relative;
+        
+            figcaption{
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                padding: 20px 20px 20px 20px;
+                transition: all 300ms ease-in;
+                z-index: 2;
+                .item{
+                    width: 100%;
+                    display: inline-block;
+                    font-size: 10px;
+                    font-weight: bold;
+                    color: white;
+                    padding: 0px 0px 0px 20px;
+                    position: relative;
+                    img{
+                        position: absolute;
+                        width: auto;
+                        height: 12px;
+                        left: 0px;
+                        top: 0px;
+                    }
+                }
+            }
+        }
+        .txt{
+            opacity: 1;
+        }
+    }
+}
+
+.uhForyouBox33{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .title{
+        margin-bottom: 30px;
+        text-align: left;
+        width: 100%;
+        max-width: 960px;
+        @include mediaLaptopMini{
+            margin-bottom: 18px;
+        }
+    }
+}
+
+
+
+
+// Sumary
+.uhSumari{
+    padding: 70px 0px 40px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mediaLaptop{
+        padding: 50px 0px 30px 0px;
+    }
+}
+
+.uhSumari2{
+    padding: 50px 0px 50px 0px;
+    @include mediaLaptop{
+        padding: 50px 0px 50px 0px;
+    }
+    @include mediaMediumPhone{
+        padding: 20px 0px 30px 0px;
+    }
+}
+
+.uhSumariBox{
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    background: rgba(11,39,57,.5);
+    border-radius: 12px;
+    padding: 20px 30px 30px 30px;
+    border: 1px solid rgba(255,255,255,.15);
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    @include mediaPhone{
+    }
+    .title{
+        margin: 0px 0px 20px 0px;
+        h4{
+            font-size: 20px;
+            font-family: var(--sfRegular);
+            @include mediaPhone{
+                text-align: center;
+                width: 100%;
+            }
+            @include mediaMediumPhone{
+                text-align: left;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.uhSumariBox2{
+    margin: 40px 0px 0px 0px;
+    .inscritos{
+        margin: 0px !important;
+    }
+}
+
+.uhSumariList{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5% 0px 5%;
+    .time{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 0px 0px 0px;
+        .circle{
+            width: 160px;
+            height: 160px;
+            border: 10px solid var(--pink);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .min{
+                font-size: 34px;
+                color: white;
+                font-family: var(--font1);
+                font-weight: 500;
+                letter-spacing: 0.5;
+            }
+            p{
+                margin: 0px;
+                font-size: 10px;
+                color: white;
+                font-family: var(--sfRegular);
+                letter-spacing: 1px;
+            }
+        }
+        .txt{
+            padding: 0px 0px 0px 25px;
+            p{
+                font-size: 14px;
+                margin: 5px 0px 5px 0px;
+                font-family: var(--sfRegular);
+                font-weight: normal;
+                strong{
+                    
+                    font-family: var(--sfBold);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .inscritos{
+        margin: -30px 0px 0px 0px;
+        h3{
+            font-size: 34px;
+            color: var(--pink);
+            font-weight: bold;
+            margin: 0px 0px 7px 0px;
+            img{
+                display: inline-block;
+                width: auto;
+                height: 22px;
+            }
+        }
+        h4{
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+    @include mediaPhone{
+        flex-direction: column;
+        .time{
+            .circle{
+                width: 110px;
+                height: 110px;
+                .min{
+                    font-size: 24px;
+                }
+                p{
+                    font-size: 10px;
+                    letter-spacing: 0px;
+                }
+            }
+        }
+        .inscritos{
+            margin: 10px 0px 10px 0px;
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 230px;
+            h3{
+                margin: 0px;
+            }
+            h4{
+                font-size: 14px;
+                padding-left: 10px;
+                br{
+                    display: none;
+                }
+            }
+        }
+    }
+    @include mediaMediumPhone{
+        padding: 0px;
+        .time{
+            .txt{
+                padding: 0px 0px 0px 15px;
+            }
+        }
+    }
+}
+
+// Detalle de curso
+.uhDc{
+    padding: 50px 0px 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include mediaTablet{
+        padding: 30px 0px 30px 0px;
+    }
+}
+.uhDcBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 960px;
+    @include mediaTablet{
+        flex-direction: column;
+    }
+    .txt{
+        width: 360px;
+        .category{
+            background: var(--pink);
+            font-size: 14px;
+            color: white;
+            padding: 7px 10px 7px 10px;
+            border-radius: 7px;
+            font-family: var(--sfRegular);
+            letter-spacing: 1px;
+        }
+        h3{
+            color: var(--blue);
+            font-size: 34px;
+            font-weight: 600;
+            margin: 17px 0px 15px 0px;
+            display: inline-block;
+            width: 100%;
+        }
+        p{
+            margin: 0px 0px 25px 0px;
+            font-size: 14px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+        @include mediaLaptop{
+            //width: 370px;
+            padding-right: 3% ;
+            h3{
+                font-size: 30px;
+                margin: 12px 0px 11px 0px;
+            }
+            p{
+                margin-bottom: 13px;
+            }
+        }
+        @include mediaTablet{
+            width: 100%;
+            padding-right: 0% ;
+        }
+    }
+
+}
+
+.uhDcImg{
+    width: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    img{
+        display: block;
+    }
+    &:before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: rgba(0,0,0,.6);
+        z-index: 1;
+    }
+    .play{
+        position: absolute;
+        z-index: 1;
+        width: 41px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    @include mediaLaptop{
+        width: 480px;
+    }
+    @include mediaTablet{
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+
+
+
+// Lessing note
+.lessingUpdate{
+    background: #46274f;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 120px 0px 70px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    @include mediaTablet{
+        margin: 90px 0px 70px 0px;
+    }
+    @include mediaPhone{
+        flex-direction: column-reverse;
+        margin: 50px 0px 50px 0px;
+    }
+    .txt{
+        width: calc( 100% - 418px);
+        padding: 0px 50px 0px 50px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+
+        p{
+            margin: 0px;
+            font-family: var(--sfBold);
+            font-size: 20px;
+        }
+        a{
+            margin: 15px 0px 0px 0px;
+            &::after{
+                content: '';
+                width: 8px;
+                height: 12px;
+                background: url('../assets/img/ico_arrow_left.png') no-repeat;
+                background-size: 100% 100%;
+                margin: 0px 0px 0px 20px;
+            }
+        }
+        @include mediaTablet{
+            padding: 0px 30px 0px 30px;
+            p{
+                font-size: 16px;
+            }
+        }
+        @include mediaPhone{
+            padding: 30px 30px 30px 30px;
+            width: 100%;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            p{
+                font-size: 14px;
+                margin-bottom: 20px;
+                br{
+                    display: none;
+                }
+            }
+            
+        }
+    }
+    figure{
+        width: 418px;
+        position: relative;
+        @include mediaPhone{
+            width: 100%;
+        }
+        img{
+            display: block;
+        }
+        &::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: -moz-linear-gradient(left, rgba(70,39,79,1) 0%, rgba(70,39,79,0) 100%);
+            background: -webkit-linear-gradient(left, rgba(70,39,79,1) 0%,rgba(70,39,79,0) 100%);
+            background: linear-gradient(to right, rgba(70,39,79,1) 0%,rgba(70,39,79,0) 100%);
+            z-index: 1;
+        }
+        @include mediaPhone{
+            &::before{
+                background: -moz-linear-gradient(top, rgba(70,39,79,0) 0%, rgba(70,39,79,0.01) 1%, rgba(70,39,79,1) 100%);
+                background: -webkit-linear-gradient(top, rgba(70,39,79,0) 0%,rgba(70,39,79,0.01) 1%,rgba(70,39,79,1) 100%);
+                background: linear-gradient(to bottom, rgba(70,39,79,0) 0%,rgba(70,39,79,0.01) 1%,rgba(70,39,79,1) 100%);
+            }
+        }
+    }
+}
+
+.lessingUpdate2{
+    margin: 0px 0px 70px 0px;
+}
+
+
+
+
+// New  recent
+.uhRecentBox{
+    display: flex;
+    max-width: 960px;
+    width: 100%;
+    .uhRecentLast{
+        width: calc( 100% - 580px );
+        figure{
+            width: 100%;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            img{
+                display: block;
+                object-fit: cover;
+                height: 365px;
+            }
+            figcaption{
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                width: 100%;
+                height: auto;
+                padding: 0px 20px 20px 20px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: flex-start;
+                z-index: 2;
+                h4{
+                    font-size: 24px;
+                    font-family: var(--sfBold);
+                }
+                p{
+                    margin: 0px;
+                    color: var(--sky-blue);
+                }
+                a{
+                    margin: 10px 0px 0px 0px;
+                }
+                @include mediaPhone{
+                    h4{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+            &::before{
+                content: '';
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: 1;
+                background: -moz-linear-gradient(top, rgba(28,48,53,0) 0%, rgba(28,48,53,0.01) 1%, rgba(16,25,30,0.8) 100%);
+                background: -webkit-linear-gradient(top, rgba(28,48,53,0) 0%,rgba(28,48,53,0.01) 1%,rgba(16,25,30,0.8) 100%);
+                background: linear-gradient(to bottom, rgba(28,48,53,0) 0%,rgba(28,48,53,0.01) 1%,rgba(16,25,30,0.8) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001c3035', endColorstr='#9110191e',GradientType=0 );
+            }
+        }
+    }
+    .uhRecentList{
+        width: 580px;
+        padding: 0px 0px 0px 27px;
+        height: 365px;
+        h4{
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+    @include mediaLaptop{
+        .uhRecentLast{
+            width: calc( 100% - 480px );
+        }
+        .uhRecentList{
+            width: 480px;
+        }
+    }
+    @include mediaLaptopMini{
+        .uhRecentLast{
+            width: calc( 100% - 400px );
+        }
+        .uhRecentList{
+            width: 400px;
+        }
+    }
+    @include mediaTablet{
+        flex-direction: column;
+        .uhRecentLast{
+            width: 100%;
+            figure{
+                img{
+                    height: 270px;
+                }
+            }
+        }
+        .uhRecentList{
+            width: 100%;
+            padding: 20px 0px 0px 0px;
+            height: auto;
+        }
+    }
+}
+
+.uhRecentItem{
+    display: flex;
+    background: rgba(26,45,77,.5);
+    margin-bottom: 16px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 00px 0px 0px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    @include mediaLaptop{
+        padding: 0px 20px 0px 0px;
+    }
+    @include mediaMediumPhone{
+        flex-direction: column;
+        padding: 0px 0px 0px 0px;
+    }
+    figure{
+        width: 160px;
+        border-radius: 10px;
+        overflow: hidden;
+        img{
+            display: block;
+            height: 100px;
+            object-fit: cover;
+        }
+        @include mediaLaptop{
+            width: 150px;
+        }
+        @include mediaLaptopMini{
+            width: 120px;
+        }
+        @include mediaMediumPhone{
+            width: 100%;
+            img{
+                height: 130px
+            }
+        }
+
+    }
+    .txt{
+        width: calc( 100% - 160px ) ;
+        padding: 0px 130px 0px 20px;
+        h3{
+            font-size: 16px;
+            font-family: var(--sfRegular);
+            margin: 6px 0px 4px 0px;
+            letter-spacing: 0.5px;
+        }
+        a{
+            background: var(--pink);
+            padding: 5px;
+            font-size: 10px;
+            font-family: var(--sfRegular);
+            border-radius: 3px;
+
+
+        }
+        p{
+            margin: 0px;
+            font-size: 10px;
+            color: var(--sky-blue);
+        }
+        .info{
+            width: 100%;
+            height: auto;
+            text-align: left;
+            margin-top: 5px;
+            img{
+                width: 10px;
+            }
+            .item{
+                color: white;
+                font-family: var(--sfLight);
+                letter-spacing: 1px;
+                font-size: 10px;
+                margin-bottom: 3px;
+            }
+        }
+        @include mediaLaptop{
+            padding: 0px 90px 0px 15px;
+            width: calc( 100% - 150px ) ;
+            h3{
+                font-size: 15px;
+                
+            }
+        }
+        @include mediaLaptopMini{
+            width: calc( 100% - 120px ) ;
+        }
+        @include mediaMediumPhone{
+            padding: 0px 130px 0px 10px;
+            width: 100%;
+        }
+
+    }
+    .btnRecent{
+        height: 40px;
+        background: rgba(255,255,255,.2);
+        line-height: 36px;
+        padding: 0px 20px 0px 20px;
+        border-radius: 20px;
+        border: 2px solid rgba(255,255,255,.5);
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 4;
+        @include mediaLaptopMini{
+            font-size: 14px;
+            padding: 0px 15px 0px 15px;
+        }
+        @include mediaMediumPhone{
+            margin-bottom: 15px;
+            margin-top: 10px;
+            width: 200px;
+            top: auto;
+            transform: none;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+    }
+}
+
+
+// Lessing for you
+.lessingFyBox{
+    h3{
+        color: white;
+        font-size: 34px;
+        font-weight: 500;
+        strong{
+            color: var(--blue);
+            font-weight: 500;
+        }
+    }
+}
+
+
+.hiLessin{
+    position: fixed;
+    right: -33px;
+    bottom: 0px;
+    background: transparent;
+    z-index: 3;
+    width: 170px;
+    height: auto;
+}
+
+.blurPagesDisable{
+    .blurPages{
+        filter: none !important;
+        transform: none !important;
+    }
+}
+
+
+
+
+// Popup Offer
+.dashboardPopupOffer{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    overflow: hidden;
+    outline: none;
+    .dashboardPopupOfferBox{
+        display: block;
+        width: 85%;
+        max-width: 600px;
+        border-radius: 20px;
+        overflow: hidden;
+        top: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    img{
+        display: block;
+    }
+}
+
+.dpoClose{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    background: var(--pink);
+    border-radius: 50px;
+    z-index: 1;
+    cursor: pointer;
+    span{
+        position: absolute;
+        background: white;
+        width: 30px;
+        height: 4px;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) rotate(45deg);
+        &::before{
+            content: '';
+            background: white;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            transform: rotate(90deg);
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@import '../../mixin.scss';
+
+.lfbList{
+    margin: 20px 0px 30px 0px;
+    
+    .swiper{
+        padding: 40px 0px 0px 0px;
+    }
+    .swiper-pagination{
+        position: absolute;
+        bottom: auto !important;
+        top: 0px;
+        right: 0px;
+        z-index: 4;
+        text-align: right;
+        padding: 3px 70px 0px 0px;
+        color: white;
+        font-size: 16px;
+        .swiper-pagination-current{
+            color: var(--sky-blue);
+        }
+
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+        position: absolute;
+        right: 0px;
+        left: auto;
+        top: 0px;
+        bottom: 0px;
+        transform: none;
+        margin: 0px;
+        height: 25px;
+        &::after{
+            font-size: 20px;
+            height: 25px;
+            line-height: 25px;
+        }
+    }
+    .swiper-button-next{
+        right: 0px;
+    }
+    .swiper-button-prev{
+        right: 30px;
+    }
+}

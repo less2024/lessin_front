@@ -1,0 +1,65 @@
+// media aliases and breakpoints
+$miniPhone: 375px;
+$mediumPhone2:  500px;
+$mediumPhone:  600px;
+$phone: 767px;
+$tablet: 992px;
+$laptopMini: 1150px;
+$laptop: 1279px;
+$pcsmall: 1550px;
+$pc: 1919px;
+
+// media devices
+@mixin mediaMiniPhone {
+  @media screen and (max-width: #{$miniPhone}) {
+    @content;
+  }
+}
+
+@mixin mediaMediumPhone {
+  @media screen and (max-width: #{$mediumPhone}) {
+    @content;
+  }
+}
+
+@mixin mediaMediumPhone2 {
+  @media screen and (max-width: #{$mediumPhone2}) {
+    @content;
+  }
+}
+
+@mixin mediaPhone {
+  @media screen and (max-width: #{$phone}) {
+    @content;
+  }
+}
+
+@mixin mediaTablet {
+    @media screen and (max-width: #{$tablet}) {
+      @content;
+    }
+}
+
+@mixin mediaLaptop {
+    @media screen and (max-width: #{$laptop}) {
+      @content;
+    }
+}
+
+@mixin mediaLaptopMini {
+  @media screen and (max-width: #{$laptopMini}) {
+    @content;
+  }
+}
+
+@mixin madiaPcsmall {
+    @media screen and (max-width: #{$pcsmall}) {
+      @content;
+    }
+}
+
+@mixin mediaPc {
+    @media screen and (max-width: #{$pc}) {
+      @content;
+    }
+}

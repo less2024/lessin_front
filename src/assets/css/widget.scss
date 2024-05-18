@@ -1,0 +1,176 @@
+@import '../css/mixin.scss';
+
+// Widget
+.widgetCont{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    pointer-events: none;
+    background: rgba(0,0,0,.0);
+    backdrop-filter: blur(0px);
+    transition: all 300ms ease-in;
+}
+
+.widgetBox{
+    width: 330px;
+    background: #F2F2F7;
+    padding: 40px 14px 30px 14px;
+    border-radius: 20px;
+    right: 5%;
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    pointer-events: visible;
+    text-align: center;
+    pointer-events: none;
+    align-items: center;
+    opacity: 0;
+    z-index: 2;
+    transition: all 300ms ease-in;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.3);
+    &:before{
+        content: '';
+        width: 100%;
+        height: 4px;
+        background: rgb(0,122,255);
+        background: -moz-linear-gradient(left, rgba(0,122,255,1) 0%, rgba(245,15,87,1) 100%);
+        background: -webkit-linear-gradient(left, rgba(0,122,255,1) 0%,rgba(245,15,87,1) 100%);
+        background: linear-gradient(to right, rgba(0,122,255,1) 0%,rgba(245,15,87,1) 100%);
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: 1;
+    }
+    h3{
+        color: var(--pink);
+        font-size: 16px;
+        font-weight: bold;
+    }
+    h4{
+        color: var(--blue);
+        font-weight: bold;
+        
+    }
+    p{
+        font-size: 12px;
+        color: #414751;
+        margin: 5px 0px 0px 0px;
+    }
+    small{
+        color: #8891A1;
+        font-size: 12px;
+        margin: 18px 0px 30px 0px;
+        font-family: var(--sfRegular);
+        letter-spacing: 0.5px;
+    }
+    figure{
+        width: 100px;
+        margin: 17px 0px 17px 0px;
+    }
+    .btnWhatsapp{
+        width: 100%;
+        background: #00E676;
+        border-radius: 12px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 0px 16px 0px;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        img{
+            width: auto;
+            height: 15px;
+            margin: 0px 0px 0px 5px;
+        }
+    }
+    .widgetClose{
+        position: absolute;
+        top: 13px;
+        right: 16px;
+        cursor: pointer;
+    }
+    @include mediaMediumPhone2{
+        width: 90%;
+    }
+}
+
+.widgetBoxIco{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--pink);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 300ms ease-in;
+    z-index: 2;
+    pointer-events: visible;
+    animation: MyDiv;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    svg{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 42px;
+        height: 42px;
+        z-index: 1;
+    }
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: -moz-linear-gradient(top, rgba(26,45,77,0) 0%, rgba(26,45,77,1) 100%);
+        background: -webkit-linear-gradient(top, rgba(26,45,77,0) 0%,rgba(26,45,77,1) 100%);
+        background: linear-gradient(to bottom, rgba(26,45,77,0) 0%,rgba(26,45,77,1) 100%);
+        position: absolute;
+        top: 30%;
+        opacity: 0;
+        left: 0px;
+        transition: all 300ms ease-in;
+    }
+    &:hover{
+        &::before{
+            top: 0%;
+            opacity: 1;
+        }
+    }
+    @include mediaMediumPhone2{
+        width: 70px;
+        height: 70px;
+        svg{
+            width: 30px;
+            height: 30px;
+            top: 20px;
+            left: 20px;
+        }
+    }
+    
+}
+
+@keyframes MyDiv {
+    0%   {transform: scale(1.05,1.05);}
+    30%  {transform: scale(1,1);}
+    70%  {transform: scale(1,1);}
+    100%  {transform: scale(1.05,1.05);}
+}
+
+.widgetContActive{
+    backdrop-filter: blur(5px);
+}
+
+.widgetBoxActive{
+    opacity: 1;
+    pointer-events: visible;
+    bottom: 5%;
+}

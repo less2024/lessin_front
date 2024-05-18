@@ -1,0 +1,76 @@
+@import '../../mixin.scss';
+
+.cursosSwiperCrecimiento{
+    overflow:visible;
+    margin-top: -30px;
+    .swiper{
+        padding: 40px 0px 0px 0px;
+        @include mediaPhone{
+            padding: 0px 30px 0px 30px;
+            margin-top: 30px;
+            overflow: visible;
+        }
+    }
+    .swiper-pagination{
+        position: absolute;
+        bottom: auto !important;
+        top: 0px;
+        right: 0px;
+        z-index: 4;
+        text-align: right;
+        padding: 3px 70px 0px 0px;
+        color: white;
+        font-size: 16px;
+        .swiper-pagination-current{
+            color: var(--sky-blue);
+        }
+        @include mediaPhone{
+            bottom: 0px;
+            top: auto;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+            text-align: center;
+            padding: 15px 0px 0px 0px;
+        }
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+        position: absolute;
+        right: 0px;
+        left: auto;
+        top: 0px;
+        bottom: 0px;
+        transform: none;
+        margin: 0px;
+        height: 25px;
+        &::after{
+            font-size: 20px;
+            height: 25px;
+            line-height: 25px;
+        }
+        @include mediaPhone{
+            top: auto;
+            bottom: -37px;
+        }
+    }
+    .swiper-button-next{
+        right: 0px;
+        @include mediaPhone{
+            right: calc( 50% - 60px );
+        }
+    }
+    .swiper-button-prev{
+        right: 30px;
+        @include mediaPhone{
+            right: auto;
+            left: calc( 50% - 60px );
+        }
+    }
+
+    .cursoItem{
+        .txt{
+            opacity: 1;
+        }
+    }
+} 

@@ -1,0 +1,50 @@
+
+:root{
+    // Colores
+    --white: #ffffff;
+    --black: #000000;
+    --blue: #007AFF;
+    --dark-blue:#1A2D4D;
+    --sky-blue: #5CE1E6;
+    --pink: #F50F57;
+    --orange: #FF8A00;
+    --light-pink: #F582A6;
+    --gris: #8891A1;
+
+    
+    // Fuentes
+    --font1: 'Fira Sans', sans-serif;
+    --font2: 'Roboto', sans-serif;
+    --sfLight: 'sfLight', sans-serif;
+    --sfRegular: 'sfRegular', sans-serif;
+    --sfSemibold: 'sfSemibold', sans-serif;
+    --sfBold: 'sfBold', sans-serif;
+}
+
+@font-face {
+    font-family: 'sfLight';
+    font-style: normal;
+    font-weight: 400;
+    src: local('sfLight'), local('sfLight'), url('../fonts/sf_light.woff') format('woff'), url('../fonts/sf_light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'sfRegular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('sfRegular'), local('sfRegular'), url('../fonts/sf_regular.woff') format('woff'), url('../fonts/sf_regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'sfSemibold';
+    font-style: normal;
+    font-weight: 400;
+    src: local('sfSemibold'), local('sfRegular'), url('../fonts/sf_semibold.woff') format('woff'), url('../fonts/sf_semibold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'sfBold';
+    font-style: normal;
+    font-weight: 400;
+    src: local('sfBold'), local('sfBold'), url('../fonts/sf_bold.woff') format('woff'), url('../fonts/sf_bold.woff2') format('woff2');
+}

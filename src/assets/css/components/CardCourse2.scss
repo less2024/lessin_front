@@ -1,0 +1,116 @@
+@import '../mixin.scss';
+
+.cursoItem2{
+    width: 100%;
+    transition: all 300ms ease-in;
+    border-radius: 20px;
+    cursor:pointer;
+    figure{
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        max-height: 196px;
+        img{
+            width: 100%;
+            display: block;
+        }
+        figcaption{
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            padding: 20px 20px 20px 20px;
+            transition: all 300ms ease-in;
+            opacity: 0;
+            z-index: 2;
+            .item{
+                width: 100%;
+                display: inline-block;
+                font-size: 10px;
+                font-weight: bold;
+                color: white;
+                padding: 0px 0px 0px 20px;
+                position: relative;
+                img{
+                    position: absolute;
+                    width: auto;
+                    height: 12px;
+                    left: 0px;
+                    top: 0px;
+                }
+            }
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            pointer-events: none;
+            left: 0px;
+            bottom: -20%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,26,45,0) 0%,rgba(0,26,45,1) 100%);
+            z-index: 1;
+        }
+    }
+    .txt{
+        padding: 21px;
+        width: 100%;
+        opacity: 0;
+        transition: all 300ms ease-in;
+        h4{
+            color: white;
+            font-size: 20px;
+            font-family: var(--sfBold);
+            font-weight: normal;
+            margin: 18px 0px 0px 0px;
+        }
+        .catList{
+            a{
+                background: var(--pink);
+                padding: 5px 10px 5px 10px;
+                border-radius: 5px;
+                font-family: var(--sfBold);
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+        }
+        p{
+            color: var(--sky-blue);
+            font-size: 14px;
+            margin: 0px;
+        }
+        .btnCurso{
+            border: 2px solid var(--pink);
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            border-radius: 15px;
+            font-weight: normal;
+            color: white;
+            background: rgba(245,15,87,.2);
+            font-size: 14px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            margin: 28px 0px 0px 0px;
+            font-family: var(--sfSemibold);
+        }
+    }
+    @include mediaTablet{
+        background: rgba(0,122,255,.1);
+        backdrop-filter: blur(50px);
+        .txt{
+            padding: 15px;
+            opacity: 1;
+            h4{
+                font-size: 16px;
+            }
+        }
+        .btnCurso{
+            margin-top: 20px !important;
+        }
+    }
+}

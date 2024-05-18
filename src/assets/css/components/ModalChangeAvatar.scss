@@ -1,0 +1,86 @@
+@import '../mixin.scss';
+
+.changeAvatarCont{
+    background:white;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    h3{
+        color: var(--dark-blue);
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+    ul{
+        list-style: none;
+        padding: 0px;
+        li{
+            width: 20%;
+            display: inline-block;
+            padding: 7px;
+            position: relative;
+            .changeAvatarItem{
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+                overflow: hidden;
+                cursor: pointer;
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,.15);
+                position: relative;
+                transition: all ease-in-out 300ms;
+                border:0px solid var(--pink);
+                img{
+                    display: block;
+                }
+                &::before{
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: var(--pink);
+                    opacity: 0;
+                    position: absolute;
+                    left: 0px;
+                    z-index: 1;
+                    transition: all ease-in-out 300ms;
+                }
+                &:hover{
+                    &::before{
+                        opacity: .2;
+                    }
+                }
+            }
+            .ico{
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                z-index: 1;
+                width: 28px;
+                height: 28px;
+                background: var(--pink);
+                backdrop-filter: blur(10px);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                svg{
+                    color: white;
+                }
+            }
+        }
+        .active{
+            .changeAvatarItem{
+                border: 6px solid var(--pink);
+
+            }
+            .ico{
+                opacity: 1;
+            }
+
+        }
+    }
+}
+
+.btnChangeBox{
+    align-items: center;
+    justify-content: center;
+}

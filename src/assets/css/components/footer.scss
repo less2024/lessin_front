@@ -1,0 +1,190 @@
+@import '../../css/mixin.scss';
+
+.footerCont{
+    padding: 48px 0px 0px 0px;
+    background: #F2F2F7;
+    z-index: 3;
+}
+
+.footerBox{
+    justify-content: space-between;
+    padding: 0px 0px 40px 0px;
+    @include mediaPhone{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 0px 20px 0px;
+    }
+}
+
+.footerItem{
+    @include mediaPhone{
+        width: 130px;
+        margin-bottom: 18px;
+    }
+    .title{
+        h3{
+            font-size: 34px;
+            font-weight: 500;
+            color: var(--dark-blue);
+            strong{
+                color: var(--blue);
+                font-weight: 500;
+            }
+            .pink{
+                color: var(--pink);
+            }
+            @include mediaTablet{
+                font-size: 30px;
+            }
+            @include mediaPhone{
+                width: 270px;
+                margin-bottom: 30px;
+                br{
+                    display: none;
+                }
+                
+            }
+        }
+    }
+    h4{
+        color: var(--orange);
+        font-size: 14px;
+        font-family: var(--sfBold);
+        letter-spacing: 1px;
+        margin: 0px 0px 5px 0px;
+        
+    }
+    ul{
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        li{
+            padding: 4px 0px 4px 0px;
+            margin: 4px 0px 4px 0px;
+            a{
+                font-size: 14px;
+                padding: 0px 0px 0px 30px;
+                position: relative;
+                color: var(--dark-blue);
+                cursor: pointer;
+                &::before{
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    border: 2px solid var(--orange);
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 7px;
+                    top: 2px;
+                }
+            }
+            @include mediaPhone{
+                padding: 1px 0px 1px 0px;
+                margin: 1px 0px 1px 0px;
+                a{
+                    font-size: 10px;
+                    padding: 0px 0px 0px 20px;
+                    &::before{
+                        width: 5px;
+                        height: 5px;
+                        border: 1px solid var(--orange);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footerItem2{
+    @include mediaPhone{
+        width: 260px;
+        margin-bottom: 0px
+    }
+}
+
+.footerItemSkyblue{
+    h4{
+        color: var(--pink);
+    }
+    ul{
+        li{
+            a{
+                &::before{
+                    border: 2px solid var(--pink);
+                }
+            }
+            @include mediaPhone{
+                a{
+                    &::before{
+                        border: 1px solid var(--pink);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footerItemBlue{
+    h4{
+        color: var(--blue);
+    }
+    ul{
+        li{
+            a{
+                padding-left: 30px;
+                &::before{
+                    display: none;
+                }
+                img{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 24px;
+                }
+            }
+            @include mediaPhone{
+                padding: 4px 0px 4px 0px;
+                margin: 4px 0px 4px 0px;
+                a{
+                    img{
+                        width: 18px;
+                        top: -3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.copyRight{
+    background: var(--pink);
+}
+
+.copyRightBox{
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    .txt{
+        p{
+            margin: 0px;
+        }
+    }
+    @include mediaPhone{
+        flex-direction: column;
+        .txt{
+            margin-top: 10px;
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+}
+.copyLessing{
+    img{
+        width: 162px;
+    }
+}

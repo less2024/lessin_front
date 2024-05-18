@@ -1,0 +1,651 @@
+@import '../../css/mixin.scss';
+
+.headerCont2{
+    position: fixed !important;
+    z-index: 9;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none;
+    top: 0px;
+    left: 0px;
+    figure{
+        img{
+            height: 27px;
+        }
+    }
+}
+
+.headerTop{
+    width: 100%;
+    height: 80px;
+    pointer-events: visible;
+    background: rgba(20,34,58,.7);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    padding: 0px 100px 0px 150px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(30px);
+    @include mediaTablet{
+        padding: 0px 5%;
+        figure{
+            img{
+                height: 30px;
+            }
+        }
+    }
+    @include mediaPhone{
+        height: 50px;
+        figure{
+            margin-top: 5px;
+            img{
+                width: 61.02px;
+                height: 25px;
+            }
+        }
+    }
+}
+
+.headerSearch{
+    width: 490px;
+    display: flex;
+    .MuiInputBase-adornedEnd {
+        padding-left: 39px !important;
+        padding-right: 15px !important;
+    }
+    .MuiAutocomplete-endAdornment{
+        right: auto;
+        left: 10px;
+    }
+    .MuiButtonBase-root{
+        color: white;
+        
+    }
+    .MuiInputBase-root{
+        background: rgba(255,255,255,.2);
+        border-radius: 20px;
+        height: 40px;
+        padding: 0px 0px 0px 20px;
+        width: 100%;
+        //outline: none;
+        color: white;
+        &::before,
+        &:after{
+            display: none !important;
+            height: 0px !important;
+        }
+    }
+    .MuiInputAdornment-root{
+        svg{
+            fill: var(--white);
+        }
+    }
+    .Mui-focused{
+        .MuiAutocomplete-popupIndicatorOpen{
+            transform: none;
+        }
+    }
+    @include mediaTablet{
+        display: none;
+    }
+}
+.headerSearch2{
+    display: none;
+    @include mediaTablet{
+        width: 100%;
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+
+.headerRespOpen{
+    display: none;
+    @include mediaTablet{
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        color: white;
+        display: flex;
+    }
+}
+
+
+.headerProfile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ico{
+        margin: 0px 18px 0px 0px;
+        img{
+            width: auto;
+            height: 16px;
+        }
+    }
+    .profile{
+        position: relative;
+        padding: 0px 20px 0px 0px;
+        img{
+            width: auto;
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            right: 0px;
+            top: 18px;
+            width: 8px;
+            height: 12px;
+            background: url('../../img/ico_arrow_left.png') center no-repeat;
+            background-size: 100% 100%;
+            transform: rotate(90deg);
+        }
+        @include mediaPhone{
+            img{
+                width: 30px;
+                height: 30px;
+            }
+            &::before{
+                top: 10px;
+            }
+        }
+    }
+}
+
+
+.headerLeft{
+    width: 80px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: #14223A;
+    pointer-events: visible;
+    z-index: 2;
+    position: absolute;
+    border-radius: 0px 30px 30px 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.15);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 300ms ease-in;
+    padding: 0px 0px 160px 0px;
+    pointer-events: none;
+    &:hover{
+        width: 230px;
+        .headerLogout{
+            .logout{
+                span{
+                    opacity: 1;
+                    width: calc( 100% - 24px );
+                    padding-left: 10px;
+                }
+            }
+            .profile{
+                span{
+                    opacity: 1;
+                    width: calc( 100% - 24px );
+                    padding-left: 10px;
+                }
+            }
+        }
+        .hlMenu{
+            li{
+                a{
+                    span{
+                        opacity: 1;
+                        width: calc( 100% - 34px );
+                        padding: 0px 0px 0px 10px;
+                    }
+                }
+            }
+        }
+        @include mediaPhone{
+            width: 160px;
+            left: -160px;
+        }
+    }
+    @include mediaTablet{
+        width: 230px;
+        left: -230px;
+    }
+    @include mediaPhone{
+        width: 160px;
+        left: -160px;
+        padding: 0px 0px 80px 0px;
+    }
+}
+
+.headerLeftOpen{
+    left: 0px;
+    .headerLogout{
+        .logout{
+            span{
+                opacity: 1;
+                width: calc( 100% - 24px );
+                padding-left: 10px;
+            }
+        }
+        .profile{
+            span{
+                opacity: 1;
+                width: calc( 100% - 24px );
+                padding-left: 10px;
+            }
+        }
+        
+    }
+    .hlMenu{
+        li{
+            a{
+                span{
+                    opacity: 1;
+                    width: calc( 100% - 34px );
+                    padding: 0px 0px 0px 10px;
+                }
+            }
+        }
+        .active{
+            a{
+                span{
+                    color: var(--sky-blue);
+                }
+                svg{
+                    path{
+                        fill: var(--sky-blue);
+                    }
+                }
+            }
+        }
+    } 
+}
+
+.companyLogo{
+    width: 100%;
+    height: 80px;
+    background: rgba(255,255,255,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 47px;
+        height: auto;
+    }
+    @include mediaPhone{
+        height: 50px;
+        background: rgba(92,225,230,.2);
+    }
+}
+
+.hlMenu{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    li{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            display: flex;
+            padding: 20px 0px 20px 0px;
+            width: 100%;
+            padding: 20px 15px 20px 25px;
+            pointer-events: visible;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            svg{
+                width: 24px;
+                height: auto;
+                path{
+                    stroke: var(--white);
+                }
+            }
+            span{
+                width: 0px;
+                opacity: 0;
+                transition: all 300ms ease-in;
+            }
+            &::before{
+                content: '';
+                width: 4px;
+                height: 0%;
+                background: var(--pink);
+                right: 0px;
+                position: absolute;
+                transition: all 300ms ease-in;
+                top: 0px;
+                bottom: 0px;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            &:hover{
+                background: rgba(0,122,255,.1);
+                &::before{
+                    height: 100%;
+                }
+                svg{
+                    path{
+                        stroke: var(--sky-blue);
+                    }
+                    span{
+                        color: var(--sky-blue);
+                    }
+                }
+                span{
+                    color: var(--sky-blue);
+                }
+
+            }
+        }
+    }
+    &:hover{
+        li{
+            
+            a{
+                
+                span{
+                    opacity: 1;
+                    width: calc( 100% - 34px );
+                    padding: 0px 0px 0px 10px;
+                }
+                &::before{
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .active{
+        a{
+                
+            &::before{
+                height: 100%;
+            }
+        }
+    }
+}
+
+.headerLogout{
+    .logout{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px 15px 20px 28px;
+        position: relative;
+        margin-bottom: 20px;
+        pointer-events: visible;
+        @include mediaPhone{
+            padding: 20px 15px 20px 22px;
+        }
+        svg{
+            width: 24px;
+            height:  auto;
+        }
+        span{
+            width: 0px;
+            opacity: 0;
+            text-wrap: nowrap;
+            transition: all 300ms ease-in;
+            @include mediaPhone{
+                font-size: 12px;
+            }
+        }
+        &::after{
+            content: '';
+            width: 50%;
+            height: 1px;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(255,255,255,.3);
+            bottom: 0px;
+        }
+        &::before{
+            content: '';
+            width: 4px;
+            height: 0%;
+            background: var(--pink);
+            right: 0px;
+            position: absolute;
+            transition: all 300ms ease-in;
+            top: 0px;
+            bottom: 0px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        &:hover{
+            background: rgba(0,122,255,.1);
+            &::before{
+                height: 100%;
+            }
+            span{
+                opacity: 1;
+                width: calc( 100% - 24px );
+                padding-left: 10px;
+            }
+            svg{
+                path{
+                    stroke: var(--sky-blue);
+                }
+                span{
+                    color: var(--sky-blue);
+                }
+            }
+        }
+
+    }
+    .profile{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: visible;
+        justify-content: flex-start;
+        padding: 15px 15px 20px 15px;
+
+        span{
+            opacity: 0;
+            width: 0px;
+            text-wrap: nowrap;
+            transition: all 300ms ease-in;
+            @include mediaPhone{
+                font-size: 10px;
+            }
+        }
+        img{
+            width: 40px;
+            height: auto;
+            border-radius: 50%;
+            overflow: hidden;
+            @include mediaPhone{
+                width: 25px;
+            }
+        }
+        &:hover{
+            background: rgba(0,122,255,.1);
+            &::before{
+                height: 100%;
+            }
+            span{
+                opacity: 1;
+                width: calc( 100% - 24px );
+                padding-left: 10px;
+            }
+        }
+    }
+    
+}
+
+.perfilMenu{
+    position: absolute;
+    width: 320px;
+    right: 5%;
+    border-radius: 13px;
+    top: 108px;
+    background: rgba(11,39,57,.5);
+    padding: 20px;
+    z-index: 2;
+    transition: all 300ms ease-in;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    &:before{
+        content: '';
+        width: 100%;
+        height: 4px;
+        background: rgb(0,122,255);
+        background: -moz-linear-gradient(left, rgba(0,122,255,1) 0%, rgba(245,15,87,1) 100%);
+        background: -webkit-linear-gradient(left, rgba(0,122,255,1) 0%,rgba(245,15,87,1) 100%);
+        background: linear-gradient(to right, rgba(0,122,255,1) 0%,rgba(245,15,87,1) 100%);
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: 1;
+    }
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 13px;
+        
+        figure{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                width: 40px;
+                height: auto;
+            }
+        }
+        p{
+            margin: 0px;
+            padding: 0px 0px 0px 15px;
+            font-family: var(--font1);
+            font-size: 20px;
+        }
+    }
+    .list{
+        list-style: none;
+        margin: 0px;
+        padding: 10px 0px 10px 0px;
+        border-top: 1px solid rgba(0,122,255,.3);
+        border-bottom: 1px solid rgba(0,122,255,.3);
+        li{
+            a{
+                font-size: 14px;
+                font-family: var(--sfRegular);
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                position: relative;
+                padding: 5px 0px 5px 30px;
+                margin: 5px 0px 5px 0px;
+                img{
+                    width: 18px;
+                    height: auto;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0px;
+                }
+            }
+        }
+    }
+    .logout{
+        padding: 20px 0px 0px 0px;
+        cursor: pointer;
+        a{
+            display: flex;
+            align-items: center;
+            img{
+                width: 18px;
+                margin-right: 10px;
+            }
+        }
+    }
+    @include mediaTablet{
+        top: 70px;
+        max-width: 400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px 30px 20px;
+        .title{
+            order: 3;
+            padding: 15px 0px 0px 0px;
+        }
+        .list{
+            order: 2;
+        }
+        .logout{
+            order: 4;
+        }
+    }
+    @include mediaPhone{
+        max-width: 80%;
+        width: 80%;
+        left: 0px;
+        right: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        .title{
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.perfilMenuOpen{
+    opacity: 1;
+    pointer-events: visible;
+    top: 100px;
+    @include mediaPhone{
+        top: 60px;
+    }
+}
+
+.headerOverlay{
+    background: rgba(255,255,255,.3);
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    width: 100%;
+    top: 80px;
+    height: calc( 100% - 80px );
+    backdrop-filter:blur(5px);
+    transition: all 300ms ease-in;
+    opacity: 0;
+    pointer-events: none;
+    @include mediaPhone{
+        top: 50px;
+        height: calc( 100% - 50px );
+    }
+}
+
+.headerOverlay2{
+    top: 0px;
+    height: 100%;
+}
+
+
+.headerOverlayOpen{
+    opacity: 1;
+    pointer-events: visible;
+}

@@ -1,0 +1,40 @@
+.pdcdFaq{
+    margin: 40px 0px 0px 0px;
+}
+
+
+.pdcFaqAcordion{
+    margin-top: 30px;
+    .MuiAccordion-root{
+        background: rgba(0,0,0,.05);
+        box-shadow: none;
+        border-radius: 10px;
+        padding: 20px;
+        .MuiButtonBase-root{
+            min-height: auto;
+            .MuiAccordionSummary-content{
+                margin: 0px;
+                padding: 0px 0px 0px 0px;
+                justify-content: space-between;
+                h4{
+                    font-size: 14px;
+                    color: #121212;
+                    font-family: var(--sfBold);
+                    letter-spacing: 0.7;
+                }
+            }
+            .MuiAccordionSummary-expandIconWrapper{
+
+                svg{
+                    color: var(--pink);
+                }
+            }
+        }
+        .MuiCollapse-root{
+            p{
+                color: var(--dark-blue);
+                margin: 0px;
+            }
+        }
+    }
+}

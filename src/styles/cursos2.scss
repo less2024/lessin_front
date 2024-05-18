@@ -1,0 +1,523 @@
+@import '../assets/css/mixin.scss';
+
+.pageMisCursos{
+    padding: 180px 0% 40px 0%;
+    background:var(--white);
+    overflow: hidden;
+    @include mediaLaptop{
+        padding: 180px 0% 40px 0%;
+    }
+    @include mediaTablet{
+        padding: 170px 0% 40px 0%;
+    }
+    @include mediaPhone{
+        padding: 150px 0% 30px 0%;
+    }
+    @include mediaMediumPhone{
+        padding: 90px 0px 20px 0px;
+    }
+}
+
+
+.pcdBread2{
+    margin-bottom: 60px;
+    a{
+        color: var(--pink);
+        font-size: 12px;
+        font-family: var(--sfBold);
+        letter-spacing: 0.5px;
+        position: relative;
+        padding: 0px 20px 0px 0px;
+        margin: 0px 10px 0px 0px;
+        &::before{
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-bottom: 2px solid var(--pink);
+            border-right: 2px solid var(--pink);
+            position: absolute;
+            transform: rotate(135deg);
+            right: 0px;
+            top: 3px;
+        }
+    }
+    @include mediaTablet{
+        margin-bottom: 30px;
+    }
+    @include mediaPhone{
+        //display: none;
+        
+    }
+}
+
+.misCursos{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.pdcBlockMenu{
+    background: var(--dark-blue);
+    height: 80px !important;
+    position: fixed !important;
+    top: 0px;
+    z-index: 1;
+    left: 0px;
+    @include mediaTablet{
+        height: 60px !important;
+    }
+}
+
+.misCursosBox{
+    z-index: 3;
+    position: relative;
+    .title{
+        h1{
+            color: var(--dark-blue);
+            font-size: 34px;
+            strong{
+                color: var(--blue);
+                font-size: 48px;
+            }
+        }
+        @include mediaTablet{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        @include mediaTablet{
+            margin-bottom: 20px;
+            h1{
+                font-size: 24px;
+                strong{
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+}
+
+.misCursosBackground{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.circleBack{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: .75;
+}
+
+.circlePink{
+    background: -moz-radial-gradient(center, ellipse cover, rgba(245,15,87,1) 0%, rgba(26,45,77,0) 67%, rgba(26,45,77,0) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(245,15,87,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    background: radial-gradient(ellipse at center, rgba(245,15,87,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    top: -500px;
+    right: -500px;
+    @include mediaPhone{
+        width: 700px;
+        height: 700px;
+        right: -400px;
+    }
+}
+
+.circleBlue{
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,122,255,1) 0%, rgba(26,45,77,0) 67%, rgba(26,45,77,0) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,122,255,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    background: radial-gradient(ellipse at center, rgba(0,122,255,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    bottom: -300px;
+    width: 1200px;
+    left: -600px;
+    opacity: .5;
+    @include mediaPhone{
+        width: 700px;
+        height: 700px;
+        left: -400px;
+    }
+}
+
+
+// Options
+.mcOptions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    padding: 0px 0px 30px 0px;
+    margin: 0px 0px 10px 0px;
+    @include mediaTablet{
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 20px 0px 0px 0px;
+    }
+}
+
+
+.mcOptionsList{
+    display: flex;
+
+    a{
+        margin-right: 15px;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+    .active{
+        border: 2px solid var(--pink) !important;
+        background: rgba(245,15,87,0.2);
+    }
+    @include mediaLaptop{
+        a{
+            padding: 0px 17px 0px 17px !important;
+        }
+    }
+    @include mediaTablet{
+        margin: 20px 0px 40px 0px;
+    }
+    @include mediaPhone{
+        flex-direction: column;
+        margin: 20px 0px 20px 0px;
+        a{
+            width: 100%;
+            text-align: center;
+            margin: 0px 0px 10px 0px;
+            height: 30px;
+            line-height: 26px;
+            font-size: 14px;
+        }
+    }
+}
+
+.mcInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mediaTablet{
+        flex-direction: column;
+    }
+    .inscritos{
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 50px;
+        h3{
+            font-size: 34px;
+            color: var(--pink);
+            font-weight: bold;
+            margin: 0px 0px 7px 0px;
+            img{
+                display: inline-block;
+                width: auto;
+                height: 22px;
+            }
+        }
+        h4{
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        @include mediaLaptop{
+            padding: 0px 0px 0px 30px;
+        }
+        @include mediaTablet{
+            width: 100%;
+            display: flex;
+            h4{
+                padding-left: 15px;
+                font-size: 14px;
+                line-height: 1.2;
+                margin: 0px;
+            }
+        }
+    }
+
+}
+
+
+
+// Cursos list
+.cursosTab{
+    margin: 0px 0px 0px 0px !important;
+}
+
+.cursosTabMenu{
+    margin-top: 30px;
+    .MuiButtonBase-root{
+        color: #B3B8BF;
+        text-transform: none;
+        img{
+            width: auto;
+            height: 20px;
+        }
+    }
+    .Mui-selected{
+        color: var(--sky-blue);
+    }
+    .MuiTabs-indicator{
+        display: none;
+    }
+    
+    @include mediaLaptop{
+        .MuiButtonBase-root{
+            padding: 0px 5px 0px 5px;
+            min-height: 40px;
+        }
+        .MuiTabs-flexContainer{
+            flex-wrap: wrap;
+            
+        }
+    }
+    @include mediaPhone{
+        background: white;
+        border-radius: 10px;
+        //display: none;
+        margin-top: 10px;
+        .MuiButtonBase-root{
+            width: 100%;
+            color: var(--dark-blue);
+            max-width: none;
+            border-bottom: 1px solid rgba(0,0,0,.05);
+            img{
+                display: none;
+            }
+        }
+    }
+}
+
+.cursosResp{
+    margin: 48px 0px 0px 0px !important;
+    @include mediaPhone{
+        margin: 35px 0px 0px 0px !important;
+    }
+}
+
+.cursosHomeRespBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 4;
+}
+
+.cursoItemGalWhite{
+    width: calc( 33.3% - 40px );
+    background: white;
+    backdrop-filter: blur(150px);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.2);
+    margin: 0px 14px 35px 14px;
+    figure{
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        max-height: 240px;
+        position: relative;
+        img{
+            width: 100%;
+            display: block;
+        }
+        figcaption{
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            padding: 20px 20px 20px 20px;
+            transition: all 300ms ease-in;
+            z-index: 2;
+            .item{
+                width: 100%;
+                display: inline-block;
+                font-size: 10px;
+                font-weight: bold;
+                color: white;
+                padding: 0px 0px 0px 20px;
+                position: relative;
+                img{
+                    position: absolute;
+                    width: auto;
+                    height: 12px;
+                    left: 0px;
+                    top: 0px;
+                }
+            }
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            pointer-events: none;
+            left: 0px;
+            bottom: -20%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,26,45,0) 0%,rgba(0,26,45,1) 100%);
+            z-index: 1;
+        }
+    }
+    .txt{
+        padding: 21px;
+        h4{
+            color: var(--blue);
+            font-size: 20px;
+            font-family: var(--sfBold);
+            font-weight: normal;
+            margin: 18px 0px 0px 0px;
+        }
+        .catList{
+            a{
+                background: var(--pink);
+                padding: 5px 10px 5px 10px;
+                border-radius: 5px;
+                font-family: var(--sfBold);
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+        }
+        p{
+            color: var(--dark-blue);
+            font-size: 14px;
+            margin: 0px;
+        }
+        .btnCurso{
+            border: 2px solid var(--dark-blue);
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            border-radius: 15px;
+            font-weight: normal;
+            color: var(--dark-blue);
+            background: rgba(26,45,77,.2);
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin: 28px 0px 0px 0px;
+            font-family: var(--sfSemibold);
+        }
+    }
+    @include mediaTablet{
+        width: calc( 33.3% - 15px );
+    }
+    @include mediaPhone{
+        width: calc( 50% - 15px );
+    }
+    @include mediaMediumPhone{
+        width: calc( 100% );
+    }
+}
+
+// Diplomas
+.diplomaItem{
+    background: rgba(0,0,0,.15);
+    width: calc( 33.3% - 15px );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    figure{
+        width: 140px;
+        height: 124px;
+        background: black;
+        img{
+            object-fit: cover;
+            display: block;
+        }
+    }
+    .txt{
+        padding: 0px 20px;
+        width: calc( 100% - 140px );
+        h4{
+            font-size: 18px;
+            font-family: var(--sfRegular);
+            letter-spacing: 1px;
+            margin: 0px 0px 20px 0px;
+        }
+        .iniEnd{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .date{
+                p{
+                    margin: 0px;
+                    font-size: 10px;
+                    color: var(--sky-blue);
+                }
+            }
+            .btnWhite{
+                font-size: 12px;
+                letter-spacing: 1.5px;
+                height: 35px;
+                line-height: 31px;
+                font-family: var(--sfRegular);
+                padding: 0px 15px 0px 15px;
+
+            }
+        }
+    }
+    @include madiaPcsmall{
+        figure{
+            width: 110px;
+        }
+        .txt{
+            width: calc( 100% - 110px );
+            padding: 0px 10px;
+            .iniEnd{
+                .btnWhite{
+                    height: 30px;
+                    line-height: 26px;
+                    padding: 0px 10px;
+                }
+            }
+        }
+        
+    }
+    
+    @include mediaLaptop{
+        width: calc( 50% - 15px );
+    }
+    @include mediaTablet{
+        width: calc( 100% - 0px );
+    }
+    @include mediaTablet{
+        flex-direction: column;
+        figure{
+            width: 100%;
+        }
+        .txt{
+            width: 100%;
+            padding: 15px;
+        }
+    }
+
+}
+
+
+
+.btnRespTabList{
+    display: none;
+    @include mediaPhone{
+        background: rgba(245,15,87,.2);
+        color: var(--pink);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 7px;
+        padding: 0px 15px 0px 15px;
+        margin-top: 30px;
+        font-weight: bold;
+        svg{
+            font-size: 16px;
+        }
+    }
+}
+
+.cursosTabMenuHide{
+    @include mediaPhone{
+        display: none !important;
+    }
+}

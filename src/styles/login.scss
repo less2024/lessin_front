@@ -1,0 +1,250 @@
+@import '../assets/css/mixin.scss';
+
+.loginCover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    background-image: url('../assets/img/intro_background.png');
+    background-color: var(--dark-blue);
+    background-size: cover;
+    background-blend-mode: multiply;
+    pointer-events: none;
+    overflow: hidden;
+    &::before,
+    &::after{
+        content: '';
+        width: 1200px;
+        height: 1200px;
+        border-radius: 50%;
+        background: -moz-radial-gradient(center, ellipse cover, rgba(245,15,87,1) 0%, rgba(245,15,87,0) 67%, rgba(245,15,87,0) 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(245,15,87,1) 0%,rgba(245,15,87,0) 67%,rgba(245,15,87,0) 100%);
+        background: radial-gradient(ellipse at center, rgba(245,15,87,1) 0%,rgba(245,15,87,0) 67%,rgba(245,15,87,0) 100%);
+        position: absolute;
+        opacity: .4;
+    }
+    &::before{
+        right: -500px;
+        top: -500px;
+    }
+    &::after{
+        left: -400px;
+        bottom: -400px;
+    }
+}
+
+
+.loginBox{
+    height: 100vh;
+    z-index: 3;
+    align-items: center;
+    justify-content: space-between;
+    @include mediaTablet{
+        justify-content: center;
+    }
+}
+
+
+.loginForm{
+    width: 370px;
+    height: auto;
+    padding: 30px 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.1);
+    .title{
+        text-align: center;
+        h2{
+            text-align: center;
+            font-size: 34px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 14px;
+            margin: 5px 0px 0px 0px;
+        }
+        @include mediaPhone{
+            h2{
+                font-size: 24px;
+            }
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.loginImg{
+    width: 540px;
+    @include mediaLaptop{
+        width:  440px;
+    }
+    @include mediaTablet{
+        display: none;
+    }
+}
+
+.loginFormBox{
+    padding: 20px 0px 0px 0px;
+}
+
+.formFieldLogin{
+    padding: 5px 0px 5px 0px;
+    margin: 5px 0px 5px 0px;
+    .MuiFormControl-root{
+        width: 100% !important;
+        margin: 0px;
+
+    }
+    .MuiInputLabel-root{
+        font-size: 14px;
+        color: var(--white);
+        transform: none;
+    }
+    .MuiInput-root{
+        margin-top: 25px !important;
+        padding: 0px 0px 4px 10px;
+        font-size: 14px;
+        color: white;
+        &::before{
+            border-bottom: 1px solid var(--white) !important;
+        }
+    }
+    &:last-child{
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .MuiSvgIcon-root{
+        color: var(--white);
+    }
+    button{
+        width: 100%;
+    }
+    .btnSolid {
+        margin-top: 10px;
+    }
+}
+
+.formFieldLogin{
+    justify-content: space-between;
+    .formSubField{
+        width: calc( 50% - 15px );
+    }
+    input::placeholder{
+        opacity: 0.5 !important;
+    }
+}
+
+.formFieldLogin2{
+    padding: 10px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
+}
+
+.linkForgot{
+    color: var(--sky-blue);
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    margin: 15px 0px 0px 0px;
+}
+
+
+// Redes Sociales Connect
+.formRs{
+    border-top: 1px solid rgba(255,255,255,.15);
+    padding: 20px 0px 0px 0px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    p{
+        width: 100%;
+        text-align: center;
+        color: var(--dark-blue);
+        margin: 0px 0px 20px 0px;
+    }
+    .rsBtn{
+        height: 40px;
+        border-radius: 12px;
+        width: calc( 50% - 15px );
+        text-align: center;
+        color: var(--dark-blue);
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-family: var(--sfRegular);
+        justify-content: center;
+        img{
+            height: 20px;
+            width: auto;
+            margin: 0px 10px 0px 0px;
+        }
+    }
+    .rsBtnFb{
+        background: var(--blue);
+        color: white;
+    }
+    .rsBtnGoogle{
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,.1);
+        background: var(--white);
+    }
+}
+
+.loginBackHome{
+    position: fixed;
+    bottom: 5%;
+    left: 10%;
+    background: var(--dark-blue);
+    padding: 13px 17px 13px 17px;
+    border-radius: 12px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        height: 12px;
+        width: auto;
+        margin-right: 10px;
+    }
+}
+
+// formFieldValid
+.formFieldValid{
+    margin: 15px 0px 0px 0px;
+    padding: 0px 0px 0px 10px;
+    p{
+        font-size: 12px;
+        color: var(--sky-blue);
+        margin: 0px;
+    }
+}
+
+.loginFormBoxDisabled{
+    pointer-events: none;
+    filter: grayscale(100%);
+}
+
+.formSubField{
+    .Mui-disabled{
+        -webkit-text-fill-color: white !important;
+        opacity: .5;
+    }
+}
+
+.formFieldLoginError{
+    background: rgb(245 15 87 / 100%);
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: -10px;
+    border: 2px solid var(--pink);
+    p{
+        margin: 0px;
+        font-size: 14px;
+        padding: 10px 15px 10px 15px;
+        letter-spacing: 1px;
+        text-align: center;
+        font-family: var(--sfSemibold);
+        color: white;
+    }
+}

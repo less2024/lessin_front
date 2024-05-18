@@ -1,0 +1,139 @@
+@import '../../mixin.scss';
+
+.cursosSwiperDash{
+    margin-bottom: 50px;
+    .swiper{
+        overflow-y: visible !important;
+        padding: 50px 0px 20px 0px;
+        @include mediaTablet{
+            padding: 20px 0px 20px 0px;
+        }
+    }
+
+    .swiper-pagination{
+        position: absolute;
+        bottom: auto !important;
+        top: 0px;
+        right: 0px;
+        z-index: 4;
+        text-align: right;
+        padding: 3px 70px 0px 0px;
+        color: white;
+        font-size: 16px;
+        .swiper-pagination-current{
+            color: var(--sky-blue);
+        }
+        @include mediaPhone{
+            bottom: -35px !important;
+            top: auto;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+            text-align: center;
+            padding: 15px 0px 0px 0px;
+        }
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+        position: absolute;
+        right: 0px;
+        left: auto;
+        top: 0px;
+        bottom: 0px;
+        transform: none;
+        margin: 0px;
+        height: 25px;
+        &::after{
+            font-size: 20px;
+            height: 25px;
+            line-height: 25px;
+        }
+        @include mediaPhone{
+            top: auto;
+            bottom: -37px;
+        }
+    }
+    .swiper-button-next{
+        right: 0px;
+        @include mediaPhone{
+            right: calc( 50% - 60px );
+        }
+    }
+    .swiper-button-prev{
+        right: 30px;
+        @include mediaPhone{
+            right: auto;
+            left: calc( 50% - 60px );
+        }
+    }
+    @include mediaPhone{
+        padding-bottom: 20px;
+        .swiper-button-prev,
+        .swiper-button-next{
+            right: calc( 50% - -25px );
+        }
+        .swiper-button-next{
+            right: calc( 50% - 50px );
+        }
+        .swiper{
+            overflow-x:visible !important;
+        }
+    }
+    &:hover{
+        /*
+        .swiper-slide{
+            &:hover{
+                z-index: 7;
+            }
+        }
+        .cursoItem{
+            transform: scale(1,1) translateY(0px);
+            background: rgba(0,0,0,.0);
+            backdrop-filter: blur(0px);
+            figure{
+                figcaption{
+                    opacity: 0;
+                }
+            }
+            .txt{
+                opacity: 0;
+            }
+            @include mediaLaptop{
+                transform: scale(1,1) translateY(0px);
+            }
+            @include mediaTablet{
+                transform: scale(1,1) translateY(0px);
+                background: rgba(0,122,255,.1);
+                figure{
+                    figcaption{
+                        opacity: 1;
+                    }
+                }
+                .txt{
+                    opacity: 1;
+                }
+            }
+            &:hover{
+                transform: scale(1.16,1.16) translateY(-100px);
+                background: rgba(0,122,255,.1);
+                backdrop-filter: blur(50px);
+                
+                figure{
+                    figcaption{
+                        opacity: 1;
+                    }
+                }
+                .txt{
+                    opacity: 1;
+                }
+                @include mediaLaptop{
+                    transform: scale(1.2,1.2) translateY(-100px);
+                }
+                @include mediaTablet{
+                    transform: scale(1,1) translateY(0px);
+                } 
+            }
+        }
+        */
+    }
+}

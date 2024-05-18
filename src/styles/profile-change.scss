@@ -1,0 +1,420 @@
+@import '../assets/css/mixin.scss';
+
+.pageProfile{
+    padding: 0px 0px 0px 0px;
+    background:var(--white);
+    overflow: hidden;
+}
+
+
+.profilePage{
+    height: auto;
+    min-height: 100vh;
+}
+
+.profilePageBox{
+    z-index: 2;
+    min-height: 100vh;
+    position: relative;
+}
+
+.profileBackground{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.circleBack{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: .75;
+    @include mediaPhone{
+        width: 700px;
+        height: 700px;
+        opacity: .3;
+    }
+}
+
+.circlePink{
+    background: -moz-radial-gradient(center, ellipse cover, rgba(245,15,87,1) 0%, rgba(26,45,77,0) 67%, rgba(26,45,77,0) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(245,15,87,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    background: radial-gradient(ellipse at center, rgba(245,15,87,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    top: -500px;
+    right: -500px;
+    @include mediaPhone{
+        top: -350px;
+        right: -350px;
+    }
+}
+
+.circleBlue{
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,122,255,1) 0%, rgba(26,45,77,0) 67%, rgba(26,45,77,0) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,122,255,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    background: radial-gradient(ellipse at center, rgba(0,122,255,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    bottom: -300px;
+    width: 1200px;
+    left: -600px;
+    opacity: .5;
+    @include mediaPhone{
+        width: 700px;
+        height: 700px;
+        bottom: -300px;
+        opacity: .3;
+        left: -300px;
+    }
+}
+
+
+.profilePageBody{
+    padding: 0px 5% 0px 460px;
+    @include madiaPcsmall{
+        padding: 0px 0% 0px 15%;
+    }
+    @include mediaLaptop{
+        padding: 0px 0% 0px 10%;
+    }
+    @include mediaTablet{
+        padding: 0px 0% 0px 0%;
+    }
+}
+
+// Header
+.pHeaderPortada{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    height: 290px;
+    background: #E0E1E5;
+    z-index: 4;
+}
+
+.pHeader{
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    padding: 0px 0px 30px 0px;
+    margin: -70px 0px 0px 0px;
+    display: flex;
+    align-items: self-end;
+    figure{
+        width: 160px;
+        img{
+            display: block;
+            width: 100%;
+        }
+        .ico{
+            width: 33px;
+            height: 33px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 0px;
+            right: 10px;
+            z-index: 1;
+            box-shadow: 0px 3px 10px 0px rgba(0,0,0,.15);
+            img{
+                width: 14px;
+            }
+        }
+    }
+    .name{
+        padding: 0px 0px 20px 40px;
+        h1{
+            color: var(--dark-blue);
+            font-weight: bold;
+        }
+    }
+}
+
+// About
+.profileAbout{
+    padding: 20px 0px 0px 0px;
+    .about{
+        width: calc( 100% - 340px );
+        display: inline-block;
+        padding: 15px 5% 15px 5%;
+        position: relative;
+        .icoEdit{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 24px;
+            height: 24px;
+            background: var(--dark-blue);
+            z-index: 1;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                width: 13px;
+            }
+        }
+        h5{
+            font-size: 20px ;
+            font-family: var(--sfSemibold);
+            color: var(--dark-blue);
+            position: relative;
+            margin: 0px 0px 10px 0px;
+        }
+        .note{
+            background: rgba(26,45,77,.2);
+            padding: 8px 13px 8px 13px;
+            border-radius: 10px;
+            border:2px solid rgba(26,45,77,.4);
+            p{
+                color: var(--dark-blue);
+                opacity: .6;
+                margin: 0px;
+            }
+        }
+    }
+    .sidebar{
+        width: 340px;
+    }
+}
+
+
+
+// SideBar
+.sbSumary{
+    background: rgba(11,39,57,.5);
+    padding: 30px 40px 30px 40px;   
+    border-radius: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.sbsItem{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+    h4{
+        font-size: 34px;
+        font-family: var(--sfSemibold);
+    }
+    .txt{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .ico{
+            padding: 0px 10px 0px 10px;
+            img{
+                width: auto;
+                height: 24px;
+            }
+        }
+        .title{
+            color: white;
+            font-size: 16px;
+        }
+    }
+    &:last-child{
+        margin-bottom: 0px;
+    }
+}
+
+.sbLastCource{
+    h3{
+        font-size: 20px;
+        font-family: var(-sfBold);
+        margin: 0px 0px 20px 0px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .btnWhite{
+            font-size: 14px;
+            padding: 0px 20px 0px 20px;
+        }
+    }
+    figure{
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 16px;
+        img{
+            display: block;
+        }
+        figcaption{
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            bottom: 0px;
+            padding: 13px;
+            p{
+                margin: 0px;
+                color: var(--sky-blue);
+            }
+        }
+    }
+}
+
+// Form edit profile
+.profileEditCont{
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    h3{
+        color: var(--blue);
+        font-size: 20px;
+        font-family: var(--sfBold);
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .btnWhite{
+            color: var(--pink);
+            background: rgba(245,15,87,.2);
+            border: 2px solid var(--pink);
+            font-size: 14px;
+            font-family: var(--sfBold);
+        }
+    }
+}
+
+.profileEditCont{
+    form{
+        .formRow{
+            margin: 25px 0px 25px 0px;
+            justify-content: space-between;
+            .formField{
+                width: calc( 50% - 15px );
+                .MuiFormControl-root{
+                    width: 100% !important;
+                }
+                .MuiInputLabel-root{
+                    font-size: 14px;
+                    color: var(--pink);
+                    transform: none;
+                }
+                .MuiInput-root{
+                    margin-top: 25px !important;
+                    padding: 0px 0px 4px 10px;
+                    font-size: 14px;
+                    &::before{
+                        border-bottom: 1px solid var(--blue) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.profileBread{
+    text-align: left;
+    margin: 0px 0px 30px 0px;
+}
+
+.profileBack{
+    color: var(--pink);
+    font-weight: bold;
+    padding: 0px 0px 0px 10px;
+    font-size: 12px;
+    position: relative;
+    &::before{
+        content: '';
+        width: 5px;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 5px;
+        position: absolute;
+        border-top: 2px solid var(--pink);
+        border-left: 2px solid var(--pink);
+        transform: rotate(-45deg);
+    }
+}
+
+// Menu edit
+.sbProfileMenu{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    li{
+        display: flex;
+        width: 100% ;
+        margin: 0px 0px 20px 0px;
+        a{
+            width: 100%;
+        }
+        .active{
+            border: 2px solid var(--pink);
+            background: rgba(245,15,87,.2);
+        }
+        &:last-child{
+            margin: 0px;
+        }
+    }
+}
+
+// Redes Sociales Connect
+.formRs{
+    border-top: 1px solid rgba(0,0,0,.15);
+    padding: 20px 0px 0px 0px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    p{
+        width: 100%;
+        text-align: center;
+        color: var(--dark-blue);
+        margin: 0px 0px 20px 0px;
+    }
+    .rsBtn{
+        height: 40px;
+        border-radius: 12px;
+        width: calc( 50% - 15px );
+        text-align: center;
+        color: var(--dark-blue);
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-family: var(--sfRegular);
+        justify-content: center;
+        img{
+            height: 20px;
+            width: auto;
+            margin: 0px 10px 0px 0px;
+        }
+    }
+    .rsBtnFb{
+        background: var(--blue);
+        color: white;
+    }
+    .rsBtnGoogle{
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,.1);
+    }
+}
+
+// Note Password valid
+.formDateValid{
+    padding: 0px 0px 0px 10px;
+    p{
+        color: #8891A1;
+        margin: 0px;
+        font-size: 12px;
+    }
+}
+
+.formRowBtn{
+    align-items: center !important;
+    justify-content: center !important;
+    .btnWhite{
+        border: 2px solid var(--pink);
+        color: var(--pink);
+        background: rgba(245,15,87,.2);
+    }
+}

@@ -1,0 +1,794 @@
+@import '../assets/css/mixin.scss';
+
+.pageInCourse{
+    padding: 0px 0px 0px 0px;
+    background:#F2F2F7;
+    overflow: hidden;
+}
+
+.picDet{
+    height: auto;
+    min-height: 100vh;
+}
+
+
+.picBlockMenu{
+    background: var(--dark-blue);
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    left: 0px;
+    @include mediaTablet{
+        height: 60px;
+    }
+    @include mediaPhone{
+        height: 50px;
+    }
+}
+
+.pageInCourseCont{
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 0px 0px 80px;
+    @include mediaTablet{
+        padding: 80px 0px 0px 0px;
+    }
+    @include mediaPhone{
+        padding: 50px 0px 0px 0px;
+        height: auto;
+        flex-direction: column;
+    }
+    
+}
+
+.picMedia{
+    width: calc( 100% - 450px );
+    flex-direction: column;
+    overflow: auto;
+    height: calc( 100vh - 80px );
+    transition: all ease-in-out .2ms;
+    @include mediaLaptop{
+        width: calc( 100% - 350px );
+    }
+    @include mediaPhone{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+.picPaginate{
+    padding: 40px 5% 30px 5%;
+    justify-content: space-between;
+    background: white;
+    a{
+        color: var(--dark-blue);
+        font-size: 14px;
+        font-family: var(--sfBold);
+        transition: all 300ms ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            color: var(--pink);
+        }
+    }
+    .prev,
+    .next{
+        svg{
+            width:8px;
+            height: 12px;
+        }
+    }
+    .prev{
+        svg{
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+    .next{
+        svg{
+            display: inline-block;
+            margin-right: 13px;
+            transform: scale(-1,1);
+        }
+    }
+    @include mediaPhone{
+        flex-direction: column;
+        padding: 20px 20px 20px 20px;
+        a{
+            margin-bottom: 20px;
+            font-size: 12px;
+            svg{
+                width: 4px !important;
+                height: 6px !important;
+            }
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+.picComments{
+    text-align: center;
+    background: white;
+
+    @include mediaTablet{
+        padding: 0px 30px 0px 30px;
+    }
+    @include mediaPhone{
+        display: none;
+    }
+}
+
+.picCommentsBox{
+    width: 100%;
+    max-width: 750px;
+    text-align: left;
+    h4{
+        color: var(--pink);
+        font-size: 16px;
+        font-family: var(--sfBold);
+        margin-bottom: 20px;
+    }
+}
+
+.picCommentsItem{
+    flex-wrap: wrap;
+    figure{
+        width: 50px;
+    }
+    .txt{
+        width: calc( 100% - 50px );
+        padding: 0px 0px 0px 20px;
+        h5{
+            font-size: 16px;
+            color: var(--dark-blue);
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+        p{
+            color: #B3B8BF;
+            margin: 0px;
+        }
+    }
+    .commend{
+        display: inline-block;
+        width: 100%;
+        border-radius: 15px;
+        border: 2px solid rgba(0,0,0,.2);
+        margin: 15px 0px 30px 0px;
+        padding: 10px 20px 10px 20px;
+        background: rgba(0,0,0,.07);
+        p{
+            margin: 0px;
+            color: rgba(0,0,0,.5);
+            font-size: 14px;
+        }
+    }
+}
+
+// Sidebar
+.picSidebar{
+    width: 450px;
+    background: #F4F4F9;
+    opacity: 1;
+    transition: all ease-in-out .3s;
+    display: flex;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.15);
+    height: calc( 100vh - 80px );
+    flex-direction: column;
+    overflow: auto;
+    padding: 0px 0px 160px 0px;
+    position: absolute;
+    right: 0px;
+    top: 155px;
+    @include mediaLaptop{
+        width: 350px;
+    }
+    @include mediaTablet{
+        top:65px;
+        right: auto;
+        position: relative;
+    }
+    @include mediaPhone{
+        padding: 0px 0px 30px 0px;
+        width: 100%;
+        height: auto;
+        top: 0px;
+        box-shadow: none;
+    }
+}
+
+.picBread{
+    padding: 15px 40px 15px 40px;
+    justify-content: space-between;
+    position: fixed;
+    transition: all ease-in-out .2s;
+    top: 80px;
+    right: 0px;
+    z-index: 2;
+    width: 450px;
+    background: #F4F4F9;
+    border-bottom: 5px solid var(--pink);
+    .minBar,
+    .back{
+        color: var(--dark-blue);
+        font-size: 14px;
+        font-family: var(--sfBold);
+        letter-spacing: 0.3px;
+        cursor: pointer;
+        padding: 15px;
+        svg{
+            width: 6px;
+            height: auto;
+            margin: 0px 0px 0px 10px;
+            transform: scale(-1,1);
+            path{
+                stroke: var(--dark-blue);
+                
+            }
+        }
+    }
+    .back{
+        color: var(--pink);
+        svg{
+            transform: scale(1,1);
+            path{
+                stroke: var(--pink);
+            }
+        }
+    }
+    @include mediaLaptop{
+        width: 350px;
+        padding: 15px 20px 15px 20px;
+    }
+    @include mediaTablet{
+        padding: 10px 10px 10px 10px;
+    }
+    @include mediaPhone{
+        top: auto;
+        right: auto;
+        position: relative;
+        width: 100%;
+        border-bottom: none;
+        display: none !important;
+        .minBar{
+            display: none;
+        }
+    }
+}
+
+
+.picClassItem{
+    padding: 30px 9% 30px 9%;
+    border-top:5px solid var(--pink);
+    h3{
+        color: var(--pink);
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        padding: 0px 0px 0px 30px;
+        margin-bottom: 15px;
+        svg{
+            position: absolute;
+            left: 0px;
+            top: 4px;
+            width: 20px;
+            height: 20px;
+            z-index: 1;
+        }
+        @media screen and (max-width: 1370px) {
+            font-size: 18px;
+          }
+        @include mediaTablet{
+            font-size: 16px;
+        }
+        @include mediaPhone{
+            font-size: 15px;
+        }
+
+    }
+    ul{
+        list-style: none; 
+        padding: 0px 0px 0px 0px;
+        margin: 0px;
+        li{
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            position: relative;
+            padding: 5px 10px 5px 40px;
+            margin: 5px 0px 5px 0px;
+            transition: all ease-in-out 300ms;
+            background: rgba(0,0,0,.0);
+            border-radius: 15px;
+            border: 1px solid rgba(0,0,0,0.0);
+            a{
+                color: var(--dark-blue);
+                font-size: 14px;
+                font-family: var(--sfRegular);
+                letter-spacing: 0.5px;
+                display: inline-block;
+            }
+            svg{
+                position: absolute;
+                left: 10px;
+                top: 0px;
+                bottom: 0px;
+                width: 20px;
+                height: 20px;
+                margin-top: auto;
+                margin-bottom: auto;
+                z-index: 1;
+                transform: rotate(-90deg) scale(1,-1);
+                opacity: 1;
+                circle{
+                    stroke-width: 2.5px;
+                    stroke: var(--blue);
+                    position: relative;
+                    transition: all ease-in-out 300ms;
+                    z-index: 1;
+                }
+                .progress{
+                    stroke: #b2d7ff;
+                    z-index: 2;
+                    position: relative;
+                    transition: all ease-in-out 300ms;
+                    stroke-dasharray: 100px;
+                }
+                @include mediaPhone{
+                    left: 5px;
+                }
+            }
+        }
+        .active{
+            background: rgba(0,0,0,.05);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+    }
+    @include mediaLaptop{
+        padding: 20px 7% 20px 7%;
+    }
+    @include mediaPhone{
+        padding: 20px 20px 20px 20px;
+        border-top:3px solid var(--pink);
+        h3{
+            font-size: 16px;
+            padding: 0px 0px 0px 25px;
+            svg{
+                width: 16px;
+                height: 16px;
+            }
+        }
+        ul{
+            li{
+                padding: 3px 0px 3px 25px;
+                margin: 3px 0px 3px 0px;
+                svg{
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+}
+
+.picClassItemDet{
+    padding: 20px 9% 0px 9%;
+    h4{
+        color: var(--blue);
+        font-size: 16px;
+        font-weight: bold;
+    }
+    h2{
+        font-size: 32px;
+        color: var(--dark-blue);
+        font-weight: bold;
+    }
+    .btnDownload{
+        margin: 25px 0px 30px 0px;
+        background: var(--dark-blue);
+        color: var(--sky-blue);
+        img{
+            height: 14px;
+        }
+    }
+    .banner{
+        width: 100%;
+        height: 100px;
+        display: inline-block;
+        background: rgba(0,0,0,.15);
+        border-radius: 15px;
+    }
+    @include mediaLaptop{
+        h2{
+            font-size: 26px;
+        }
+    }
+}
+
+.picRespComment{
+    display: none;
+    @include mediaPhone{
+        display: inline-block !important;
+        .picComments{
+            display: inline-block !important;
+            padding: 0px 20px 0px 20px;
+            .picCommentsBox{
+                h4{
+                    font-size: 12px;
+                }
+                .picCommentsItem{
+                    align-items: center;
+                    .txt{
+                        h5{
+                            font-size: 14px;
+                        }
+                        p{
+                            font-size: 10px;
+                        }
+                    }
+                    .commend{
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.picProgress{
+    padding: 30px 9% 0px 9%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.picProgressLbl{
+    color: var(--dark-blue);
+    font-size: 16px;
+    letter-spacing: 0.2px;
+}
+
+.lineBox{
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(0,0,0,.2);
+    margin: 10px 0px 0px 0px;
+    span{
+        position: absolute;
+        width: 30%;
+        left: 0px;
+        height: 100%;
+        border-radius: 4px;
+        background: var(--pink);
+    }
+}
+
+
+// Active Fullscreen
+.pageInCourseContActive{
+    .picSidebar{
+        opacity: 0;
+        pointer-events: none;
+        right: -450px;
+        .picBread{
+            right: -450px;
+        }
+        @include mediaPhone{
+            right: auto;
+            position: relative;
+            opacity: 1;
+            pointer-events: visible;
+            .picBread{
+                display: none !important;
+            }
+        }
+    }
+    .picMedia{
+        width: 100%;
+        .lessinPlayer{
+            height: calc( 100vh - 180px ) !important; 
+            @include mediaPhone{
+                height: auto !important;
+            }
+        }
+    }
+}
+
+.btnFullScreen{
+    position: absolute;
+    right: 20px;
+    z-index: 3;
+    top: 100px;
+    background: red;
+    padding: 15px 25px 15px 25px;
+    border-radius: 50px;
+    background: var(--pink);
+    color: white;
+    font-size: 16px;
+    font-family: var(--sfBold);
+    cursor: pointer;
+    letter-spacing: 1px;
+    svg{
+        margin-right: 15px;
+    }
+    @include mediaPhone{
+        display: none;
+    }
+}
+
+// Congratulation
+.courseCongratulation{
+    max-width: 700px;
+    width: 90%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    background: #DAEBF2;
+    border-radius: 15px;
+    padding: 30px 0px 0px 0px;
+    left: 50%;
+    outline: none;
+    text-align: center;
+    overflow: hidden;
+    @media screen and (max-width: 800px) {
+        max-width: 500px;
+    }
+    @media screen and (max-width: 570px) {
+        max-width: 350px;
+    }
+    @media screen and (max-width: 450px) {
+        max-width: 300px;
+        width: 100%;
+    }
+    .title{
+        padding: 30px 0px 0px 0px;
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        h4{
+            color: var(--dark-blue);
+            font-size: 45px;
+            font-family: var(--sfBold);
+            margin: 0px 0px 15px 0px;
+        }
+        p{
+            color: var(--dark-blue);
+            margin: 0px 0px 20px 0px;
+            font-size: 20px;
+        }
+        .btnPrimary{
+            height: 45px;
+            padding: 0px 30px 0px 30px;
+            background: var(--pink);
+            display: inline-block;
+            line-height: 45px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            font-family: var(--sfBold);
+        }
+    }
+    .ccCloud{
+        position: absolute;
+        width: 120px;
+        height: 60px;
+        background: blue;
+        background: url('../assets/img/course_celebration3.svg') center no-repeat;
+        background-size: 100% auto;
+        left: 0px;
+        z-index: 1;
+        top: 0px;
+        animation-name: certifacteCloud1;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-delay: 2.5s;
+        animation-timing-function: linear;
+    }
+    .ccCloud1{
+        top: 20%;
+        left: 00%;
+
+    }
+    .ccCloud2{
+        top: 5%;
+        left: 30%;
+        animation-name: certifacteCloud2;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+        animation-timing-function: linear;
+
+    }
+    .ccCloud3{
+        top: 15%;
+        left: 80%;
+    }
+    .ccCloud4{
+        top: 25%;
+        left: 60%;
+        animation-name: certifacteCloud2;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-delay: 0s;
+        animation-timing-function: linear;
+    }
+
+    img{
+        display: block;
+    }
+    .ccBotom,
+    .ccTop{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        position: relative;
+        img{
+            width: 60%;
+        }
+    }
+    .ccBotom{
+        img{
+            width: 80%;
+        }
+    }
+    .ccConfeti{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        width: 15px;
+        height: 15px;
+        background: url('../assets/img/course_celebration5.svg') center no-repeat;
+        background-size: 100% auto;
+        animation-name: certifacteCloud3;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-delay: 0s;
+        animation-timing-function: linear;
+    }
+
+    .ccConfeti1{
+        left: 15%;
+        top: 50%;
+        animation-delay: 0.3s;
+        
+    }
+    .ccConfeti2{
+        left: 20%;
+        top: 35%;
+        animation-delay: 0.6s;
+    }
+    .ccConfeti3{
+        left: 24%;
+        top: 45%;
+        animation-delay: 0.9s;
+    }
+    .ccConfeti4{
+        left: 15%;
+        top: 40%;
+        animation-delay: 0.3s;
+    }
+    .ccConfeti5{
+        left: 80%;
+        top: 45%;
+        animation-delay: 0.6s;
+    }
+    .ccConfeti6{
+        left: 87%;
+        top: 47%;
+        animation-delay: 0.9s;
+    }
+    .ccConfeti7{
+        left: 85%;
+        top: 40%;
+        animation-delay: 0.3s;
+    }
+    .ccConfeti8{
+        left: 80%;
+        top: 35%;
+        animation-delay: 0.6s;
+    }
+    .ccClose{
+        width: 45px;
+        position: absolute;
+        z-index: 4;
+        height: 45px;
+        background: var(--pink);
+        border-radius: 50%;
+        right: 10px;
+        cursor: pointer;
+        top: 10px;
+        span{
+            width: 25px;
+            height: 3px;
+            background: white;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            margin: auto;
+            transform: rotate(45deg);
+            &::before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: white;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+.courseCongratulationPdf{
+    padding: 0px;
+}
+
+@keyframes certifacteCloud1{
+    0%{
+        opacity: 0;
+        transform: translateX(0%);
+    }
+    25%{
+        opacity: 1;
+        transform: translateX(15%);
+    }
+    75%{
+        opacity: 1;
+        transform: translateX(30%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(45%);
+    }
+}
+
+@keyframes certifacteCloud2{
+    0%{
+        opacity: 0;
+        transform: translateX(0%);
+    }
+    25%{
+        opacity: 1;
+        transform: translateX(-15%);
+    }
+    75%{
+        opacity: 1;
+        transform: translateX(-30%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-45%);
+    }
+}
+
+@keyframes certifacteCloud3{
+    0%{
+        transform: scale(0,1);
+    }
+    75%{
+        opacity: 0;
+        transform: scale(1,1)
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0,1)
+    }
+}
+

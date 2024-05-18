@@ -1,0 +1,166 @@
+@import '../../mixin.scss';
+
+
+.cursosSwiperBox{
+    .swiper{
+        overflow-y: visible;
+        padding: 0px 20px 0px 20px;
+    }
+    .swiper-slide-next{
+        position: relative;
+        z-index: 3;
+        /*
+        .cursoItem{
+            transform: scale(1.15,1.15) translateY(-100px);
+            background: rgba(0,122,255,.1);
+            backdrop-filter: blur(50px);
+            figure{
+                figcaption{
+                    opacity: 1;
+                }
+            }
+            .txt{
+                opacity: 1;
+            }
+            @include mediaLaptop{
+                transform: scale(1.2,1.2) translateY(-100px);
+            }
+            @include mediaTablet{
+                transform: scale(1,1) translateY(0px);
+            }
+        }
+        */
+    }
+    .swiper-pagination {
+        text-align: left;
+        color: #B3B8BF;
+        font-size: 16px;
+        font-family: var(--sfRegular);
+        padding: 0px 60px 0px 90px;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        pointer-events: none;
+        display: none;
+        .swiper-pagination-current{
+            color: var(--sky-blue);
+        }
+        @include mediaTablet{
+            bottom: -40px;
+            text-align: center;
+            padding: 0px;
+        }
+        @include mediaPhone{
+            bottom: -40px;
+            text-align: center;
+            padding: 0px;
+        }
+    }
+    .swiper-slide{
+        padding: 0px 5px 0px 5px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next
+    {
+        right: auto;
+        top: auto;
+        left: 20px;
+        font-size: 14px;
+        bottom: 80px;
+        z-index: 6 !important;
+        &::after{
+            font-size: 14px;
+            opacity: 1 !important;
+        }
+        @include mediaTablet{
+            bottom: -70px;
+        }
+        @include mediaPhone{
+            bottom: -53px;
+        }
+    }
+    .swiper-button-next{
+        left: 50px;
+    }
+    @include mediaTablet{
+        padding-bottom: 40px;
+        .swiper{
+            padding: 0px 0px 0px 0px;
+        }
+        
+        .swiper-button-prev,
+        .swiper-button-next{
+            right: calc( 50% - -25px );
+            bottom: -52px;
+        }
+        .swiper-button-next{
+            right: calc( 50% - 50px );
+            bottom: -52px;
+        }
+    }
+    @include mediaPhone{
+
+        
+        .swiper{
+            overflow-x:visible !important;
+            padding: 0px;
+        }
+    }
+    &:hover{
+        .swiper-slide{
+            &:hover{
+                z-index: 7;
+            }
+        }
+        /*
+        .cursoItem{
+            transform: scale(1,1) translateY(0px);
+            background: rgba(0,0,0,.0);
+            backdrop-filter: blur(0px);
+            figure{
+                figcaption{
+                    opacity: 0;
+                }
+            }
+            .txt{
+                opacity: 0;
+            }
+            @include mediaLaptop{
+                transform: scale(1,1) translateY(0px);
+            }
+            @include mediaTablet{
+                transform: scale(1,1) translateY(0px);
+                background: rgba(0,122,255,.1);
+                figure{
+                    figcaption{
+                        opacity: 1;
+                    }
+                }
+                .txt{
+                    opacity: 1;
+                }
+            }
+            &:hover{
+                transform: scale(1.16,1.16) translateY(-100px);
+                background: rgba(0,122,255,.1);
+                backdrop-filter: blur(50px);
+                
+                figure{
+                    figcaption{
+                        opacity: 1;
+                    }
+                }
+                .txt{
+                    opacity: 1;
+                }
+                @include mediaLaptop{
+                    transform: scale(1.2,1.2) translateY(-100px);
+                }
+                @include mediaTablet{
+                    transform: scale(1,1) translateY(0px);
+                } 
+            }
+        }
+        */
+    }
+}

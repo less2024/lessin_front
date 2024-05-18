@@ -1,0 +1,60 @@
+@import '../../mixin.scss';
+
+.pdcTemarioAcordion{
+    margin-top: 20px;
+    .MuiAccordion-root{
+        background: rgba(0,0,0,.05);
+        box-shadow: none;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 18px;
+        &::before{
+            display: none;
+        }
+        .MuiButtonBase-root{
+            min-height: auto;
+            .MuiAccordionSummary-content{
+                margin: 0px;
+                padding: 0px 0px 0px 20px;
+                justify-content: space-between;
+                h4{
+                    font-size: 14px;
+                    color: #121212;
+                    font-family: var(--sfBold);
+                    letter-spacing: 0.7;
+                }
+            }
+            .MuiAccordionSummary-expandIconWrapper{
+                position: absolute;
+                left: 0px;
+                top: -5px;
+                svg{
+                    color: var(--pink);
+                }
+            }
+        }
+        .MuiCollapse-root{
+            ul{
+                list-style: none;
+                margin: 0px;
+                padding: 0px 0px 0px 5px;
+                li{
+                    position: relative;
+                    font-size: 12px;
+                    padding: 4px 0px 4px 20px;
+                    margin: 5px 0px 5px 0px;
+                    img{
+                        position: absolute;
+                        width: auto;
+                        height: 10px;
+                        left: 0px;
+                        top: 6px;
+                    }
+                }
+            }
+        }
+        .MuiAccordionDetails-root{
+            padding-bottom: 0px;
+        }
+    }
+}

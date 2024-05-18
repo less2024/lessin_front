@@ -1,0 +1,232 @@
+@import '../css/mixin.scss';
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--font1);
+    box-sizing: border-box;
+    background-color: var(--white);
+    figure{
+        position: relative;
+        margin: 0px;
+        display: inline-block;
+    }
+    h1,h2,h3,h4,h5,h6{
+        color: var(--white);
+        line-height: 1.2;
+        margin: 0px;
+        font-family: var(--font1);
+        font-weight: normal;
+    }
+    h1{
+        font-size: 44px;
+    }
+    h2{
+        font-size: 36px;
+    }
+    h3{
+        font-size: 33px;
+    }
+    h4{
+        font-size: 28;
+    }
+    h5{
+        font-size: 26;
+    }
+    h5{
+        font-size: 24px;
+    }
+    p{
+        font-size: 16px;
+        color: var(--white);
+        font-family: var(--sfRegular);
+        line-height: 1.3;
+        letter-spacing: .5px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    a{
+        text-decoration: none;
+    }
+    a,
+    button{
+        color: var(--white);
+        font-family: var(--font1);
+        //font-weight: bold;
+    }
+}
+
+.MuiContainer-root{
+    max-width: 1550px;
+    @include madiaPcsmall {
+        max-width: 1500px;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+
+// Blocks
+.inlineBlock{
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+}
+
+.inlineFlex{
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+}
+
+.secBox{
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+}
+
+.groupBox{
+    width: 100%;
+    display: block;
+    height: auto;
+    overflow: hidden;
+    background: var(--dark-blue);
+}
+
+
+// Botones
+
+
+.btnBorder,
+.btnSolid{
+    border: 2px solid white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0px 18px 0px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    //font-weight: bold;
+    font-family: var(--sfSemibold);
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    
+    img{
+        width: auto;
+        height: 20px;
+        margin: 0px 0px 0px 10px;
+    }
+}
+
+.btnSolid{
+    border: none;
+    background: var(--pink);
+    cursor: pointer;
+}
+
+.btnSolidArrow{
+    &::after{
+        content: '';
+        width: 8px;
+        height: 12px;
+        background: url('../img/ico_arrow_left.png') no-repeat;
+        background-size: 100% 100%;
+        margin: 0px 0px 0px 20px;
+    }
+}
+
+.btnWhite{
+    height: 40px;
+    background: rgba(255,255,255,.2);
+    line-height: 36px;
+    cursor: pointer;
+    padding: 0px 30px 0px 30px;
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,.5);
+}
+
+
+
+/* Prevent scrollbar during animation */
+.effect-1,
+.effect-2,
+.effect-3 {
+  overflow: hidden;
+}
+
+.effect-3 {
+  z-index: 1;
+}
+
+.effect-3::after {
+  content: "";
+  display: block;
+  position: fixed;
+  background: var(--dark-blue);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+//Modal
+.MuiModal-backdrop{
+    backdrop-filter: blur(10px) !important;
+}
+
+
+#nprogress .bar{
+    //background: var(--pink) !important;
+    //height: 15px !important;
+    top: 0px !important;
+}
+
+
+// Scroll
+html {
+    --scrollbarBG: rgba(255,255,255,2);
+    --thumbBG: rgba(0,0,0,.2);
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    width: 20px;
+}
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--pink) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--pink) ;
+    border-radius: 10px;
+    border: 2px solid var(--scrollbarBG);
+}
+
+.effect-1,
+.effect-2,
+.effect-3 {
+  overflow: hidden;
+}
+
+.effect-3 {
+  z-index: 1;
+}

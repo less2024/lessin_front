@@ -1,0 +1,107 @@
+@import '../mixin.scss';
+
+.lfbItem{
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0,122,255,.1);
+    //cursor: pointer;
+    figure{
+        border-radius: 15px ;
+        overflow: hidden;
+        max-height: 250px;
+        img{
+            display: block;
+        }
+        &:before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: rgba(0,0,0,.6);
+            z-index: 1;
+        }
+        .play{
+            position: absolute;
+            z-index: 1;
+            width: 20px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+    .txt{
+        padding: 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        .category{
+            background: var(--sky-blue);
+            color: var(--balck);
+            height: 22px;
+            padding: 0px 10px 0px 10px;
+            font-size: 10px;
+            font-family: var(--sfRegular);
+            line-height: 22px;
+            border-radius: 5px;
+            margin-bottom: 14px;
+        }
+        h4{
+            color: white;
+            line-height: 1;
+            font-size: 20px;
+            height: 40px;
+            width: 100%;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        p{
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+            height: 30px;
+            width: 100%;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        a,
+        .more{
+            height: 36px;
+            border-radius: 6px;
+            background: var(--pink);
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0px 15px 0px 15px;
+            cursor: pointer;
+            font-size: 12px;
+            color: white;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                right: 10px;
+                top: 0px;
+                bottom: 0px;
+                margin-top: auto;
+                margin-bottom: auto;
+                width: 8px;
+                height: 12px;
+                background: url('../../../assets/img/ico_arrow_left.png') center no-repeat;
+                background-size: 100% auto;
+                z-index: 1;
+            }
+        }
+    }
+}

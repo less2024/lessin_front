@@ -1,0 +1,397 @@
+@import '../assets/css/mixin.scss';
+
+.pageMisCursos{
+    padding: 180px 7% 40px 13%;
+    background:var(--dark-blue);
+    overflow: hidden;
+    @include mediaLaptop{
+        padding: 180px 5% 40px 10%;
+    }
+    @include mediaTablet{
+        padding: 170px 0% 40px 0%;
+    }
+    @include mediaPhone{
+        padding: 150px 0% 30px 0%;
+    }
+    @include mediaMediumPhone{
+        padding: 120px 0px 20px 0px;
+    }
+}
+
+.misCursos{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.misCursosBox{
+    z-index: 3;
+    position: relative;
+    .title{
+        h1{
+
+            font-size: 34px;
+            strong{
+                color: var(--blue);
+                font-size: 48px;
+            }
+        }
+        @include mediaTablet{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        @include mediaTablet{
+            margin-bottom: 20px;
+            h1{
+                font-size: 24px;
+                strong{
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+}
+
+.misCursosBackground{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.circleBack{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: .75;
+}
+
+.circlePink{
+    background: -moz-radial-gradient(center, ellipse cover, rgba(245,15,87,1) 0%, rgba(26,45,77,0) 67%, rgba(26,45,77,0) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(245,15,87,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    background: radial-gradient(ellipse at center, rgba(245,15,87,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    top: -500px;
+    right: -500px;
+}
+
+.circleBlue{
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,122,255,1) 0%, rgba(26,45,77,0) 67%, rgba(26,45,77,0) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,122,255,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    background: radial-gradient(ellipse at center, rgba(0,122,255,1) 0%,rgba(26,45,77,0) 67%,rgba(26,45,77,0) 100%);
+    bottom: -300px;
+    width: 1200px;
+    left: -600px;
+    opacity: .5;
+}
+
+
+// Options
+.mcOptions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    padding: 0px 0px 30px 0px;
+    margin: 0px 0px 10px 0px;
+    @include mediaTablet{
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 20px 0px 0px 0px;
+    }
+}
+
+
+.mcOptionsList{
+    display: flex;
+
+    a{
+        margin-right: 15px;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+    .active{
+        border: 2px solid var(--pink) !important;
+        background: rgba(245,15,87,0.2);
+    }
+    @include mediaLaptop{
+        a{
+            padding: 0px 17px 0px 17px !important;
+        }
+    }
+    @include mediaTablet{
+        margin: 20px 0px 40px 0px;
+    }
+    @include mediaPhone{
+        flex-direction: column;
+        margin: 20px 0px 20px 0px;
+        a{
+            width: 100%;
+            text-align: center;
+            margin: 0px 0px 10px 0px;
+            height: 30px;
+            line-height: 26px;
+            font-size: 14px;
+        }
+    }
+}
+
+.mcInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mediaTablet{
+        flex-direction: column;
+    }
+    .inscritos{
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 50px;
+        h3{
+            font-size: 34px;
+            color: var(--pink);
+            font-weight: bold;
+            margin: 0px 0px 7px 0px;
+            img{
+                display: inline-block;
+                width: auto;
+                height: 22px;
+            }
+        }
+        h4{
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        @include mediaLaptop{
+            padding: 0px 0px 0px 30px;
+        }
+        @include mediaTablet{
+            width: 100%;
+            display: flex;
+            h4{
+                padding-left: 15px;
+                font-size: 14px;
+                line-height: 1.2;
+                margin: 0px;
+            }
+        }
+    }
+
+}
+
+
+
+// Cursos list
+.cursosTab{
+    margin: 0px 0px 0px 0px;
+}
+
+.cursosTabMenu{
+    margin-top: 30px;
+    .MuiButtonBase-root{
+        color: #B3B8BF;
+        text-transform: none;
+        img{
+            width: auto;
+            height: 20px;
+        }
+    }
+    .Mui-selected{
+        color: var(--sky-blue);
+    }
+    .MuiTabs-indicator{
+        display: none;
+    }
+    
+    @include mediaLaptop{
+        .MuiButtonBase-root{
+            padding: 0px 5px 0px 5px;
+            min-height: 40px;
+        }
+        .MuiTabs-flexContainer{
+            flex-wrap: wrap;
+            
+        }
+    }
+    @include mediaPhone{
+        background: white;
+        border-radius: 10px;
+        //display: none;
+        margin-top: 10px;
+        .MuiButtonBase-root{
+            width: 100%;
+            color: var(--dark-blue);
+            max-width: none;
+            border-bottom: 1px solid rgba(0,0,0,.05);
+            img{
+                display: none;
+            }
+        }
+    }
+}
+
+.cursosResp{
+    margin: 48px 0px 0px 0px;
+    @include mediaPhone{
+        margin: 35px 0px 0px 0px;
+    }
+}
+
+.cursosRespBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 4;
+}
+
+.cursoItemGal{
+    width: calc( 25% - 18px );
+    margin: 0px 9px 15px 9px;
+    
+    @include mediaTablet{
+        width: calc( 33.3% - 15px );
+        margin: 0px 7.5px 15px 7.5px;
+    }
+    @include mediaPhone{
+        width: calc( 50% - 15px );
+    }
+    @include mediaMediumPhone{
+        width: calc( 100% );
+    }
+}
+
+// Diplomas
+.diplomaItem{
+    background: rgba(0,0,0,.15);
+    width: calc( 33.3% - 18px );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0px 9px 15px 9px;
+    figure{
+        width: 140px;
+        height: 124px;
+        background: black;
+        img{
+            object-fit: cover;
+            display: block;
+        }
+    }
+    .txt{
+        padding: 0px 20px;
+        width: calc( 100% - 140px );
+        h4{
+            font-size: 18px;
+            font-family: var(--sfRegular);
+            letter-spacing: 1px;
+            margin: 0px 0px 20px 0px;
+        }
+        .iniEnd{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .date{
+                p{
+                    margin: 0px;
+                    font-size: 10px;
+                    color: var(--sky-blue);
+                }
+            }
+            .btnWhite{
+                font-size: 12px;
+                letter-spacing: 1.5px;
+                height: 35px;
+                line-height: 31px;
+                font-family: var(--sfRegular);
+                padding: 0px 15px 0px 15px;
+
+            }
+        }
+    }
+    @include madiaPcsmall{
+        figure{
+            width: 110px;
+        }
+        .txt{
+            width: calc( 100% - 110px );
+            padding: 0px 10px;
+            .iniEnd{
+                .btnWhite{
+                    height: 30px;
+                    line-height: 26px;
+                    padding: 0px 10px;
+                }
+            }
+        }
+        
+    }
+    
+    @include mediaLaptop{
+        width: calc( 50% - 15px );
+        margin: 0px 7.5px 15px 7.5px;
+    }
+    @include mediaTablet{
+        width: calc( 100% - 0px );
+        margin: 0px 0px 15px 0px;
+    }
+    @include mediaTablet{
+        flex-direction: column;
+        figure{
+            width: 100%;
+        }
+        .txt{
+            width: 100%;
+            padding: 15px;
+        }
+    }
+
+}
+
+
+
+.btnRespTabList{
+    display: none;
+    @include mediaPhone{
+        background: rgba(245,15,87,.2);
+        color: var(--pink);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 7px;
+        padding: 0px 15px 0px 15px;
+        margin-top: 30px;
+        font-weight: bold;
+        svg{
+            font-size: 16px;
+        }
+    }
+}
+
+.cursosTabMenuHide{
+    @include mediaPhone{
+        display: none !important;
+    }
+}
+
+.coursesEmpty{
+    background: rgba(255,255,255,.2);
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid rgba(255,255,255,.2);
+    p{
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+            margin-right: 15px;
+        }
+    }
+}

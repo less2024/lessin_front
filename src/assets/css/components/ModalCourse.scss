@@ -1,0 +1,158 @@
+@import '../mixin.scss';
+
+.courseProductModal{
+    background: rgba(0,122,255,.1);
+    backdrop-filter: blur(20px);
+    figure{
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        &::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.35);
+            left: 0px;
+            top: 0px;
+            position: absolute;
+        }
+        img{
+            display: block;
+        }
+        .play{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+        }
+    }
+    .txt{
+        padding: 30px;
+        @include mediaPhone {
+            padding: 20px;
+        }
+        .catList{
+            margin-bottom: 10px;
+            a{
+                background: var(--pink);
+                padding: 5px;
+                border-radius: 5px;
+                display: inline-block;
+                font-size: 15px;
+            }
+        }
+        h4{
+            font-size: 34px;
+            @include mediaTablet{
+                font-size: 28px;
+            }
+            @include mediaPhone {
+                font-size: 20px;
+            }
+        }
+        p{
+            color: var(--sky-blue);
+            font-size: 14px;
+            font-family: var(--sfLight);
+            margin: 0px;
+            @include mediaPhone {
+                font-size: 12px;
+            }
+        }
+        .caractBox{
+            border-bottom: 1px solid rgba(255,255,255,.5);
+            display: flex;
+            margin: 15px 0px 15px 0px;
+            padding: 0px 0px 10px 0px;
+            .item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+                img{
+                    width: 15px;
+                    height: auto;
+                    margin-right: 10px;
+                }
+                color: white;
+                font-size: 14px;
+                font-family: var(--sfLight);
+            }
+        }
+        .descTxt{
+            p{
+                color: white;
+                font-size: 14px;
+                font-family: var(--sfLight);
+            }
+        }
+    }
+}
+
+.btnModalInsc{
+    margin-top: 20px;
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+    a{
+        display: inline-block;
+        background: rgba(245,15,87,.3);
+        padding: 10px 40px 10px 15px;
+        border-radius: 6px;
+        font-size: 14px;
+        color: var(--pink);
+        font-family: var(--sfSemibold);
+        position: relative;
+        transition: all ease-in-out 300ms;
+        svg{
+            width: 15px;
+            position: absolute;
+            right: 10px;
+            top: 7px;
+        }
+        &:hover{
+            background: rgba(245,15,87,1);
+            color: white;
+        }
+    }
+}
+
+.courseModalClose{
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+    cursor: pointer;
+    top: 10px;
+    svg{
+        color: white;
+    }
+}
+
+.courseProductModal2{
+    figure{
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+    }
+    .byMentor{
+        margin-bottom: 10px !important;
+    }
+    .fecha{
+        background: var(--sky-blue);
+        display: inline-block;
+        color: var(--dark-blue) !important;
+        padding: 5px 10px 5px 10px;
+        width: auto;
+        border-radius: 3px;
+        font-weight: 700;
+        font-size: 14px !important; 
+        margin-bottom: 10px !important;
+        position: absolute;
+        left: 20px;
+        bottom: 10px;
+    }
+}

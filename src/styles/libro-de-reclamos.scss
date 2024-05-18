@@ -1,0 +1,231 @@
+@import '../assets/css/mixin.scss';
+
+.libroPage{
+    background: #121212;
+    padding: 150px 0px 100px 0px;
+    @include mediaTablet{
+        padding: 100px 0px 80px 0px;
+    }
+}
+
+.libroTitle{
+    margin-bottom: 60px;
+    h1{
+        color: var(--pink);
+        font-size: 34px;
+        font-weight: bold;
+    }
+    @include mediaTablet{
+        margin-bottom: 30px;
+        h1{
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+}
+
+.libroFormItem{
+    margin-bottom: 45px;
+    .title{
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 60px;
+        width: 100%;
+        h3{
+            color: var(--sky-blue);
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .MuiFormControl-root{
+            label{
+                color: var(--white);
+                
+                .MuiTypography-root{
+                    font-size: 13px;
+                    font-family: var(--sfRegular);
+                    letter-spacing: 1px;
+                }
+                .MuiRadio-root{
+                    svg{
+                        width: 18px;
+                        height: 18px;
+                        color: rgba(255,255,255,.7);
+                    }
+                }
+                .Mui-checked{
+                    svg{
+                        color: var(--pink);
+                    }
+                }
+            }
+        }
+        @include mediaTablet{
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            h3{
+                font-size: 16px;
+            }
+            .MuiFormControl-root{
+                margin-top: 20px;
+            }
+        }
+    }
+
+}
+
+.libroField{
+    position: relative;
+    z-index: 1;
+    margin-bottom: 33px;
+    .MuiFormControl-root{
+        width: 100% !important;
+        margin: 0px;
+    }
+    .MuiInputLabel-root{
+        font-size: 14px;
+        color: var(--white);
+        transform: none !important;
+    }
+    .MuiInput-root{
+        margin-top: 25px !important;
+        padding: 0px 0px 4px 10px;
+        font-size: 14px;
+        color: white;
+        &::before{
+            border-bottom: 1px solid var(--white) !important;
+        }
+    }
+    .MuiSelect-icon {
+        color: white;
+        font-size: 0px;
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid white;
+        border-left: 2px solid white;
+        transform: rotate(-45deg);
+        top: 3px;
+        right: 18px;
+    }
+
+    
+}
+
+.libroRowRdo{
+    .MuiFormLabel-root{
+        margin-bottom: 10px;
+    }
+    .MuiFormControl-root{
+        label{
+            color: var(--white);
+            
+            .MuiTypography-root{
+                font-size: 13px;
+                font-family: var(--sfRegular);
+                letter-spacing: 1px;
+            }
+            .MuiRadio-root{
+                svg{
+                    width: 18px;
+                    height: 18px;
+                    color: rgba(255,255,255,.7);
+                }
+            }
+            .Mui-checked{
+                svg{
+                    color: var(--pink);
+                }
+            }
+        }
+    }
+}
+
+
+.libroRow{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .libroField{
+        width: calc( 33.3% - 50px);
+    }
+    @include madiaPcsmall{
+        .libroField{
+            width: calc( 33.3% - 20px);
+        }
+    }
+    @include mediaTablet{
+        .libroField{
+            width: 100%;
+        }
+    }
+}
+
+.libroRow2right{
+    .libroFieldCombine{
+        width: calc( 67.7% - 40px );
+        display: flex;
+        justify-content: space-between;
+        //align-items: center;
+    }
+    @include mediaTablet{
+
+        .libroFieldCombine{
+            width: 100%;
+            flex-wrap: wrap;
+            .libroField{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.libroRow2Left{
+    .libroFieldCombine{
+        width: calc( 67.7% - 40px );
+    }
+    @include mediaTablet{
+        .libroFieldCombine{
+            width: 100%;
+        }
+    }
+}
+
+.libroRow1{
+    .libroField{
+        width: 100%;
+    }
+}
+
+.libroRow2{
+    .libroField{
+        width: calc( 50% - 50px );
+    }
+    @include mediaTablet{
+        .libroField{
+            width: 100%;
+        }
+    }
+}
+.libroRow1FullWidth{
+    .libroField{
+        width: 100%;
+    }
+}
+
+.libroNote{
+    p{
+        font-size: 13px;
+    }
+}
+
+.libroSnd{
+    margin: 40px 0px 0px 0px;
+    a{
+        
+        border-radius: 12px;
+        background-color: var(--dark-blue);
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+    }
+}
