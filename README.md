@@ -4,7 +4,7 @@
 
 Detalles tecnicos del desarrollo
 
-![Logo](https://admin.lessin.pe/public/readme/lessin_front.png.png)
+![Logo](https://admin.lessin.pe/public/readme/lessin_front.png)
 
 ## React (Next Js)
 
