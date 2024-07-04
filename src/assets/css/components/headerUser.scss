@@ -53,6 +53,7 @@
 .headerSearch{
     width: 490px;
     display: flex;
+    position: relative;
     .MuiInputBase-adornedEnd {
         padding-left: 39px !important;
         padding-right: 15px !important;
@@ -79,6 +80,11 @@
             height: 0px !important;
         }
     }
+    .MuiAutocomplete-clearIndicator{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
     .MuiInputAdornment-root{
         svg{
             fill: var(--white);
@@ -89,6 +95,7 @@
             transform: none;
         }
     }
+
     @include mediaTablet{
         display: none;
     }

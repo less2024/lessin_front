@@ -16,6 +16,7 @@ import celebrationCourse1 from '../../../assets/img/course_celebration1.svg';
 import celebrationCourse2 from '../../../assets/img/course_celebration2.svg';
 import CertificadoPdf from '@/components/certificado/certificado2';
 import VideoFrameFirst from '@/components/dashboard/CursoVideoFirst';
+import Link from 'next/link';
 
 export default function InCourse({data}) {
 
@@ -452,12 +453,12 @@ export default function InCourse({data}) {
                                     <path d="M5 1L1 5L5 9" stroke="#F50F57" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </div>
-                            <div className="back" onClick={()=>console.log(temarioList)}>
+                            <Link className="back" href={'/dashboard/cursos/'+data[0].slug}>
                                 Volver al curso
                                 <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5 1L1 5L5 9" stroke="#F50F57" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
-                            </div>
+                            </Link>
                         </div>
                         <div className="inlineBlock picClassList">
 

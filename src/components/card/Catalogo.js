@@ -22,7 +22,7 @@ const CardCatalogo = ({data,categories,direct}) => {
 
     return (
         <div className="cardCatalogo" key={faker.string.uuid()}>
-            <Link href={ direct ? '/dashboard/mis-cursos/'+data.slug: '/cursos/'+data.slug}>
+            <Link href={ direct ? '/dashboard/mis-cursos/'+data.slug : '/dashboard/cursos/'+data.slug}>
                 <figure>
                     <Image src={data.acf.imagen_catalogo ? data.acf.imagen_catalogo : inicio_curso1} width={100} height={100} title={data.title.rendered} alt={data.title.rendered} />
                     <figcaption>

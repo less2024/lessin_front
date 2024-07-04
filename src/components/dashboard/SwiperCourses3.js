@@ -20,7 +20,7 @@ import ModalCourse from '../card/ModalCourse';
 import { userLessing } from "../../context/user";
 
 
-const DashSwiperCourses3 = ({data}) => {
+const DashSwiperCourses3 = ({data,dashboard}) => {
 
     const [catList,setCatList] = useState(null);
     const { categoriesUniv } = useContext(userLessing);
@@ -78,7 +78,7 @@ const DashSwiperCourses3 = ({data}) => {
             <Swiper {...marcasParams} >
                 {data.length > 0 &&  swiperItems }
             </Swiper>
-            <ModalCourse data={dataModal} modal={open} modalClose={handleClose}  categories={catList ? catList : null} />
+            <ModalCourse data={dataModal} modal={open} modalClose={handleClose}  categories={catList ? catList : null} dashboard={dashboard}/>
         </div>
     )
 };

@@ -183,8 +183,59 @@
         }
     }
 }
+
 .copyLessing{
     img{
         width: 162px;
+    }
+}
+
+.termCont{
+    .termBox{
+        padding: 20px;
+        h3{
+            font-size: 24px;
+            color: var(--dark-blue);
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: center;
+        }
+        p{
+            color: var(--dark-blue);
+            font-family: var(--font1);
+            line-height: 1.4;
+            font-size: 14px;
+            text-align: justify;
+        }
+        a{
+            color: var(--white);
+            font-weight: normal;
+            position: relative;
+            z-index: 0;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: var(--pink);
+                bottom: 0px;
+                left: 0px;
+            }
+        }
+        ul{
+            padding: 0px 0px 0px 20px;
+            li{
+                font-size: 14px;
+                color: var(--dark-blue);
+                margin-bottom: 15px;
+            }
+        }
+        .termBtn{
+            .btnSolid{
+                border-radius: 5px !important;
+                width: 100%;
+            }
+        }
     }
 }

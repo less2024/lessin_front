@@ -65,9 +65,9 @@ body{
 }
 
 .MuiContainer-root{
-    max-width: 1550px;
+    max-width: 1550px !important;
     @include madiaPcsmall {
-        max-width: 1500px;
+        max-width: 1500px !important;
         padding-right: 5%;
         padding-left: 5%;
     }

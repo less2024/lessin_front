@@ -27,7 +27,7 @@ const style = {
   outline:'none'
 };
 
-const ModalCourse = ({data,modal,modalClose,categories}) => {
+const ModalCourse = ({data,modal,modalClose,categories,dashboard}) => {
     
     return (
         <Modal
@@ -43,10 +43,12 @@ const ModalCourse = ({data,modal,modalClose,categories}) => {
                 {data &&
                     <div className="courseProductModal">
                         <figure>
-                            <Image src={data.acf.pcurso_videopreview} width={100} height={100} title={data.title.rendered} alt={data.title.rendered} />
-                            <div className="play" >
-                                <Image src={ico_det_curso_play}  width={"50"} height={"50"} />
-                            </div>
+                            <Link href={dashboard ? '/dashboard/cursos/'+data.slug : '/cursos/'+data.slug} onClick={modalClose} >
+                                <Image src={data.acf.pcurso_videopreview} width={100} height={100} title={data.title.rendered} alt={data.title.rendered} />
+                                <div className="play" >
+                                    <Image src={ico_det_curso_play}  width={"50"} height={"50"} />
+                                </div>
+                            </Link>
                         </figure>
                         <div className="txt">
                             <div className="catList">
@@ -83,7 +85,7 @@ const ModalCourse = ({data,modal,modalClose,categories}) => {
                                 <p>{data.acf.pcurso_desccorta}</p>
                             </div>
                             <div className="btnModalInsc">
-                                <Link href={'/cursos/'+data.slug} onClick={modalClose} >
+                                <Link href={dashboard ? '/dashboard/cursos/'+data.slug : '/cursos/'+data.slug} onClick={modalClose} >
                                     Detalles del curso
                                     <ArrowForwardIosIcon />
                                 </Link>

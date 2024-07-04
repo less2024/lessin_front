@@ -167,6 +167,7 @@ const Footer = () => {
                 <div className="inlineFlex termCont">
                     <div className="inlineBlock termBox">
                         <div className="termTxt">
+                            <h3>Politíca de Cookies</h3>
                             <p>
                                 <strong>El uso de Cookies:</strong> <br />
                                 Al momento de navegar por nuestra web, se almacenan “cookies” en tu ordenador, por eso debes leer nuestra política de cookies para ampliar información sobre el uso de estas y cómo puedes gestionarlas.
@@ -179,10 +180,6 @@ const Footer = () => {
                         </div>
                         <div className="inlineBlock termBtn">
                             <a onClick={handleClose} className='btnSolid'>Entiendo</a>
-                            <div className="inlineBlock termLinks">
-                                <a href="#">Términos y Condiciones</a> <span>|</span>
-                                <a href="#">Políticas de Privacidad</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -198,6 +195,7 @@ const Footer = () => {
                 <div className="inlineFlex termCont termCont2">
                     <div className="inlineBlock termBox">
                         <div className="termTxt">
+                            <h3>Términos y Condiciones</h3>
                             <p>
                                 <strong>Bienvenido a <a href="https://lessin.pe/" target='_blank'>https://lessin.pe/</a></strong>
                             </p>
@@ -266,10 +264,6 @@ const Footer = () => {
                         </div>
                         <div className="inlineFlex termBtn">
                             <a onClick={handleClose} className='btnSolid'>Entiendo</a>
-                            <div className="inlineBlock termLinks">
-                                <a href="#">Términos y Condiciones</a> <span>|</span>
-                                <a href="#">Políticas de Privacidad</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -284,6 +278,7 @@ const Footer = () => {
                 <div className="inlineFlex termCont termCont2">
                     <div className="inlineBlock termBox">
                         <div className="termTxt">
+                            <h3>Política de privacidad</h3>
                             <p>
                                 La política de privacidad en <a href="https://www.lessin.pe/" target='_blank'>https://www.lessin.pe/</a> es conforme lo dispuesto en la normativa vigente de protección de tus derechos, en aplicación de la Ley Nº 29733 que regula la Protección de Datos Personales, su reglamento Decreto Supremo N° 003-2013-JUS y la Ley N° 28493 que regula el uso de correo electrónico comercial no solicitado de la legislación peruana.
                             </p>
@@ -354,10 +349,7 @@ const Footer = () => {
                         </div>
                         <div className="inlineFlex termBtn">
                             <a onClick={handleClose} className='btnSolid'>Entiendo</a>
-                            <div className="inlineBlock termLinks">
-                                <a href="#">Términos y Condiciones</a> <span>|</span>
-                                <a href="#">Políticas de Privacidad</a>
-                            </div>
+
                         </div>
                     </div>
                 </div>

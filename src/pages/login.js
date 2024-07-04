@@ -103,7 +103,7 @@ export default function Login() {
             username: 'webing.pe',
             password: 'lessin2020root'
           }).then((respLog)=>{
-            console.log(data[0])
+            //console.log(data[0])
             axios.get('https://api.lessin.pe/wp-json/wp/v2/clientes/'+data2.data[0].user_client).
             then((resp)=>{
               var avatar = '';

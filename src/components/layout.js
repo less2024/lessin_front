@@ -56,6 +56,8 @@ export default function RootLayout({ children }) {
   const handleComponents = () =>{
     if(routerComponents === '/login'){
       setComponents('componentNone');
+    }else if(routerComponents === '/auth'){
+      setComponents('componentNone');
     }else if(routerComponents === '/datospersonales'){
       setComponents('componentNone');
     }else if(routerComponents === '/forget-password'){

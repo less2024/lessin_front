@@ -105,7 +105,7 @@ const HeaderUser = () => {
                         options={coursesList}
                         onChange={(e, value) => {
                             setSearchField(value);
-                            router.push('/cursos/'+value.slug)
+                            router.push('/dashboard/cursos/'+value.slug)
                         }}
                         //getOptionLabel={(option) => option.title.rendered}
                         getOptionLabel={option => option.title.rendered}

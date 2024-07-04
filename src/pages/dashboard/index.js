@@ -401,7 +401,7 @@ export default function Dashboard() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <Link href={'cursos/'+item.slug} className='btnRecent'>
+                                                    <Link href={'/dashboard/cursos/'+item.slug} className='btnRecent'>
                                                         Empezar
                                                     </Link>
                                                 </div>
@@ -416,7 +416,7 @@ export default function Dashboard() {
                                     <h4>Tenemos esto <strong>para ti</strong></h4>
                                 </div>
                                 {dataCursos &&
-                                <DashSwiperCourses data={dataCursos} />
+                                <DashSwiperCourses data={dataCursos} dashboard={true} />
                                 }
                             </div>
                         }
@@ -486,7 +486,7 @@ export default function Dashboard() {
                             <div className="title">
                                 <h4>Cursos nuevos <strong className='skyblue'>para tu crecimiento</strong></h4>
                             </div>
-                            {dataCursos && <DashSwiperCourses3 data={dataCursos} />}
+                            {dataCursos && <DashSwiperCourses3 data={dataCursos} dashboard={true} />}
                         </div>
 
                         <div className="inlineBlock lessingUpdate lessingUpdate2">
@@ -538,7 +538,7 @@ export default function Dashboard() {
                     <Box className={'dashboardPopupOffer'}>
                         <div className="dashboardPopupOfferBox">
                             <div className="dpoClose" onClick={handleModalOfferClose}><span></span></div>
-                            <a href="https://api.whatsapp.com/send?phone=51967332778" target='_blank' >
+                            <a href="https://api.whatsapp.com/send?phone=51913898958" target='_blank' >
                                 <Image src={'https://api.lessin.pe/wp-content/uploads/2024/05/offerPopup.gif'} alt="Oferta especial" title="Oferta especial" width={10} height={10} />
                                 
                             </a>

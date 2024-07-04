@@ -41,7 +41,7 @@ const Widget = () => {
                     ayuda que necesitas.
                 </small>
 
-                <a href="https://api.whatsapp.com/send?phone=51967332778" target='_blank' className="btnWhatsapp">
+                <a href="https://api.whatsapp.com/send?phone=51913898958" target='_blank' className="btnWhatsapp">
                     Escríbenos aquí
                     <Image src={icoWhatsapp} alt="Whatsapp" title="Whatsapp"/>
                 </a>
